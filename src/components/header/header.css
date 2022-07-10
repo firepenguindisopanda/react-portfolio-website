@@ -1,0 +1,155 @@
+header {
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+/*CTA*/
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/*Header Socials*/
+.header__socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 43%;
+    bottom: 2rem;
+}
+
+.header__socials::after {
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+/*Profile styles*/
+.myprofile {
+    background: linear-gradient(var(--bg-color), transparent);
+    width: 22rem;
+    height: 30rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    margin-top: 4rem;
+    border-radius: 12rem 12rem 0 0;
+    
+    overflow: hidden;
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+.myprofile > img{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.scroll__down {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.scroll_down{
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    left: 50%;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+}
+
+.scroll_down:before,
+.scroll_down:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: var(--color-white);
+}
+
+.scroll_down:before{
+    left: 0;
+    transform: skew(0deg, 30deg);
+}
+
+.scroll_down:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+}
+
+.scroll_down:first-child{
+    animation: move 3s ease-out infinite;
+}
+
+.scroll_down:nth-child(2){
+    animation: move 3s ease-out infinite;
+    animation-delay: 1s;
+}
+
+.text{
+    display: block;
+    margin-top: 25px;
+    margin-left: -30px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes move {
+    25% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    67% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+}
+
+/* Media Queries (Medium Devices) */
+
+@media screen and (max-width: 1024px) {
+    header {
+        height: 68vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+    }
+    .header__socials,
+    .scroll__down {
+        display: none;
+    }
+}
