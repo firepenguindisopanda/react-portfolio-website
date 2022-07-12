@@ -36,9 +36,6 @@ body{
   color: var(--color-white);
   line-height: 1.7;
   /*background-image: url(../src/assets/pexels-cottonbro-4646214.jpg);*/
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
   font-family: "Lora", serif;
 }
 
@@ -62,6 +59,7 @@ h1{
 
 section{
   margin-top: 8rem;
+  height: 100vh;
 }
 
 section > h2, 
