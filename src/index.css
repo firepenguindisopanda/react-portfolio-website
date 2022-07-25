@@ -28,7 +28,12 @@ html{
 }
 
 ::-webkit-scrollbar{
-  display: none;
+  width: 0.5rem;
+  background-color: #788592;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #40464d;
 }
 
 body{

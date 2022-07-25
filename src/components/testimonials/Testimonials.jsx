@@ -82,7 +82,7 @@ const Testimonials = () => {
     setIsOpen(true);
   }
   return (
-    <section id='testimonials'>
+    <section id='certificates'>
       <h2>Certificates</h2>
       <Swiper className="container testimonials__container"
       modules={[Navigation, Pagination, Scrollbar, A11y]}
