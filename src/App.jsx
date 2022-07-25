@@ -9,6 +9,7 @@ import Footer from './components/footer/Footer'
 import About from './components/about/About'
 import Services from './components/services/Services'
 import Testimonials from './components/testimonials/Testimonials'
+import TwoColumns from './components/twocomlumns/TwoColumns'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Header />
       <Nav />
       <About />
+      <TwoColumns />
       <Experience />
       <Services />
       <Portfolio />

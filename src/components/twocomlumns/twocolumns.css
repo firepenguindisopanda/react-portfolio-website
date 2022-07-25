@@ -1,35 +1,29 @@
-.about__container{
+.twocolumns__container{
     display: grid;
-    grid-template-columns: 35% 50%;
-    gap: 15%;
+    grid-template-columns: 35% 55%;
+    gap: 10%;
 }
-.about__me{
+.twocolumns__me{
     width: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 2rem;
+    border-radius: 1rem;
     background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
     display: grid;
     place-items: center;
 }
 /*This css rotates the img 10 degrees*/
-.about__me-image{
-    border-radius: 2rem;
-    overflow: hidden;
-    transform: rotate(10deg);
-    transition: var(--transition);
+.twocolumns__me-image{
+    object-fit: cover;
+    border-radius: 1rem;
 }
 
-.about__me-image:hover{
-    transform: rotate(0deg);
-}
 
-.about__cards{
+.twocolumns__cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 
-.about__card {
+.twocolumns__card {
     background: var(--color-bg-variant);
     border: 1px solid transparent;
     border-radius: 1rem;
@@ -38,67 +32,67 @@
     transition: var(--transition);
 }
 
-.about__card:hover{
+.twocolumns__card:hover{
     background: transparent;
     border-color: var(--color-primary);
     cursor: default;
 }
 
-.about__icon {
+.twocolumns__icon {
     color: var(--color-primary);
     font-size: 1.4rem;
     margin-bottom: 1rem;
 }
 
-.about__card h5{
+.twocolumns__card h5{
     font-size: 0.95rem;
 }
 
-.about__card small{
+.twocolumns__card small{
     font-size: 1rem;
     color: var(--color-light);
 }
 
-.about__content p {
+.twocolumns__content p {
     margin: 2rem 0 2.6rem;
     color: var(--color-light);
 }
 
 /*Media Queries (Medium Devices)*/
 @media screen and (max-width: 1024px) {
-    .about__container{
+    .twocolumns__container{
         grid-template-columns: 1fr;
         gap: 0;
     }
-    .about__me{
+    .twocolumns__me{
         width: 50%;
         margin: 2rem auto 4rem;
     }
-    .about__content p{
+    .twocolumns__content p{
         margin: 1rem 0 1.rem;
     }
-    .about__me-image{
+    .twocolumns__me-image{
         transform: rotate(0deg);
     }
 }
 
 /*Media Queries (Small Devices)*/
 @media screen and (max-width: 600px) {
-    .about__me{
+    .twocolumns__me{
         width: 65%;
         margin: 0 auto 3rem;
     }
-    .about__me-image{
+    .twocolumns__me-image{
         transform: rotate(0deg);
     }
-    .about__cards {
+    .twocolumns__cards {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
-    .about__content {
+    .twocolumns__content {
         text-align: center;
     }
-    .about__content p {
+    .twocolumns__content p {
         margin: 1.rem 0;
     }
 }
