@@ -11,6 +11,7 @@ const Header = () => {
       <div className="container header__container">
         <h5>Hello I'm</h5>
         <h1>Nicholas Smith</h1>
+        <h5>An Aspiring</h5>
         <Typewriter 
         options={{
           strings: ['Full Stack Developer.', 'Android Developer.', 'Software Engineer.', 'I love to build things.'],

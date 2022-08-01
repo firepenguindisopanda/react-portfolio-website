@@ -21,7 +21,7 @@ const About = () => {
             <article className="about__card">
               <FaAward className="about__icon" />
               <h5>Experience</h5>
-              <small>3+ Years Working</small>
+              <small>1+ Years Working</small>
             </article>
             <article className="about__card">
               <FiUsers className="about__icon" />
@@ -35,8 +35,10 @@ const About = () => {
             </article>
           </div>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, earum blanditiis necessitatibus autem impedit recusandae omnis nulla cupiditate voluptate aperiam quasi id eaque maiores quia quidem quas quis ipsam rerum!
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A eaque, quisquam tempora impedit veritatis cumque temporibus dolore fugit voluptates error, quos illum? Praesentium, soluta. Aliquam voluptates harum esse dolore tempora.
+            I like to look for online courses to give me an introductory understanding of different technologies.
+            After completing these online courses I would make side projects to put my skills and knowledge to the test.
+            I was a volunteer mentor in a Youth Speak Up programme. A former executive member of the University of the West Indies Computing Society club. As an executive member I presented on the benefits of Git / Github.
+            I have a passion for learning and I am always looking for new ways to improve my skills.
           </p>
           <a href="#contact" className='btn btn-primary'>Let's Talk</a>
         </div>

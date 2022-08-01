@@ -1,9 +1,9 @@
 import React from 'react'
 import './twocolumns.css'
 import POSTORDER from '../../assets/postorder_traversal.png'
-import { FaAward } from 'react-icons/fa'
-import { FiUsers } from 'react-icons/fi'
-import { VscFolderLibrary } from 'react-icons/vsc'
+import { SiCodewars } from 'react-icons/si'
+import { SiLeetcode } from 'react-icons/si'
+import { SiCodeforces } from 'react-icons/si'
 
 const TwoColumns = () => {
   return (
@@ -13,26 +13,27 @@ const TwoColumns = () => {
         <div className="twocolumns__content">
           <div className="twocolumns__cards">
             <article className="twocolumns__card">
-              <FaAward className="twocolumns__icon" />
-              <h5>Experience</h5>
-              <small>3+ Years Working</small>
+              <SiLeetcode className="twocolumns__icon" />
+              <h5>Leetcode</h5>
+              <small>293 Problems Solved.</small>
             </article>
             <article className="twocolumns__card">
-              <FiUsers className="twocolumns__icon" />
-              <h5>Clients</h5>
-              <small>Work in Progress</small>
+              <SiCodeforces className="twocolumns__icon" />
+              <h5>Codeforces</h5>
+              <small>72 Problems Solved.</small>
             </article>
             <article className="twocolumns__card">
-              <VscFolderLibrary className="twocolumns__icon" />
-              <h5>Projects</h5>
-              <small>5 projects so far!</small>
+              <SiCodewars className="twocolumns__icon" />
+              <h5>Codewars</h5>
+              <small>48 Problems Solved.</small>
             </article>
           </div>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, earum blanditiis necessitatibus autem impedit recusandae omnis nulla cupiditate voluptate aperiam quasi id eaque maiores quia quidem quas quis ipsam rerum!
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A eaque, quisquam tempora impedit veritatis cumque temporibus dolore fugit voluptates error, quos illum? Praesentium, soluta. Aliquam voluptates harum esse dolore tempora.
+            I like to solve puzzles. I use different online platforms like Hackerrank, Leetcode, Codeforces, Porject Euler and Codewars to solve problems.
+            I am a strong programmer but I know my Math skills can be improved. I use different Mathematics textbooks to refresh my understanding of topics and learn new topics.
+            I am actively using Leetcode to solve problems. I am also using Codeforces and Codewars to practice my programming and problem solving skills.
+            Project Euler is an online platform where I can solve mathematical problems.
           </p>
-          <a href="#contact" className='btn btn-primary'>Let's Talk</a>
         </div>
         <div className="twocolumns__me">
           <div className="twocolumns__me-image">
