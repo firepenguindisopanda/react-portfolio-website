@@ -24,9 +24,9 @@ const About = () => {
               <small>1+ Years Working</small>
             </article>
             <article className="about__card">
-              <FiUsers className="about__icon" />
-              <h5>Clients</h5>
-              <small>Work in Progress</small>
+              <FaAward className="about__icon" />
+              <h5>Udacity AI With Python</h5>
+              <small>Nano-Degree Scholarship Winner</small>
             </article>
             <article className="about__card">
               <VscFolderLibrary className="about__icon" />

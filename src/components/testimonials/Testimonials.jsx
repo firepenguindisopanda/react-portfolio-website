@@ -9,6 +9,7 @@ import AUTOPYTHON from '../../assets/auto_real_task_python.png'
 import BYTESNET from '../../assets/bytes_bits_comp_net.png'
 import CONIFGCLOUD from '../../assets/config_manage_cloud.png'
 import CRASHPYTHON from '../../assets/crash_course_python.png'
+import ICPC from '../../assets/icpc_caribbean_finals.png'
 
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
@@ -70,6 +71,12 @@ const certificates = [
     name: 'Crash Course in Python',
     description: 'A brief description',
     image: CRASHPYTHON
+  },
+  {
+    id: 9,
+    name: 'Finals of ICPC Caribbean',
+    description: 'A brief description',
+    image: ICPC
   }
 ]
 
