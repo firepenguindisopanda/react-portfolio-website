@@ -10,6 +10,11 @@ import About from './components/about/About'
 import Services from './components/services/Services'
 import Testimonials from './components/testimonials/Testimonials'
 import TwoColumns from './components/twocomlumns/TwoColumns'
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 
 const App = () => {
   return (
