@@ -9,9 +9,8 @@ import { ThemeProvider, createTheme, useTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Container } from '@mui/material';
 import { getDesignTokens } from './utilities';
-import IconButton from '@mui/material/IconButton';
-import Box from '@mui/material/Box';
 import DrawerAppBar from './components/DrawerAppBar/DrawerAppBar';
+import AboutMe from './components/AboutMe/AboutMe';
 
 
 
@@ -39,6 +38,7 @@ const ToggleColorMode = () => {
         <Container maxWidth="lg">
           <App />
           <main>This is the beginning of the new layout</main>
+          <AboutMe />
           
         </Container>
         

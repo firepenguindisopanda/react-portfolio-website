@@ -20,6 +20,7 @@ import PANDA from '../../assets/panda-struggle.svg';
 import Brightness4Outlined from '@mui/icons-material/Brightness4Outlined';
 import Brightness7Outlined from '@mui/icons-material/Brightness7Outlined';
 
+
 const drawerWidth = 240;
 const navItems = ['Fullstack Web Dev', 'Android Dev', 'ML Novice', 'Panda'];
 
@@ -44,7 +45,7 @@ function DrawerAppBar(props) {
                     height: 56,
                     borderRadius: '50%', // To make it a perfect circle
                     backgroundColor: 'transparent', // Set the background to transparent if needed
-                  }}
+                }}
             />
             <Divider />
             <List>
@@ -55,6 +56,11 @@ function DrawerAppBar(props) {
                         </ListItemButton>
                     </ListItem>
                 ))}
+                <ListItem>
+                    <IconButton size="small" onClick={colorMode.toggleColorMode} color="inherit" sx={{ ml: 1 }}>
+                        {theme.palette.mode === 'dark' ? <Brightness4Outlined /> : <Brightness7Outlined />}
+                    </IconButton>
+                </ListItem>
             </List>
         </Box>
     );
@@ -64,7 +70,7 @@ function DrawerAppBar(props) {
 
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <AppBar component="nav" color="primary">
                 <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                     {isSmallScreen && (
@@ -89,9 +95,9 @@ function DrawerAppBar(props) {
                             height: 56,
                             borderRadius: '50%', // To make it a perfect circle
                             backgroundColor: 'transparent', // Set the background to transparent if needed
-                          }}
+                        }}
                     />
-                    
+
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
                             <Button key={item} sx={{ color: '#fff' }}>
