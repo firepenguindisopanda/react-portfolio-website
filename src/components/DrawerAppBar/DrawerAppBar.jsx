@@ -98,7 +98,6 @@ function DrawerAppBar(props) {
                                 {item}
                             </Button>
                         ))}
-                        {theme.palette.mode} mode
                         <IconButton size="small" onClick={colorMode.toggleColorMode} color="inherit" sx={{ ml: 1 }}>
                             {theme.palette.mode === 'dark' ? <Brightness4Outlined /> : <Brightness7Outlined />}
                         </IconButton>
