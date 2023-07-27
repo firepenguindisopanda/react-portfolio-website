@@ -1,37 +1,59 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
-import Header from './components/header/Header'
-import Nav from './components/nav/Nav'
-import Portfolio from './components/portfolio/Portfolio'
-import Experience from './components/experience/Experience'
-import Contact from './components/contact/Contact'
-import Footer from './components/footer/Footer'
-import About from './components/about/About'
-import Services from './components/services/Services'
-import Testimonials from './components/testimonials/Testimonials'
-import TwoColumns from './components/twocomlumns/TwoColumns'
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { ThemeProvider, createTheme, useTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { Container } from '@mui/material';
+import { getDesignTokens } from './utilities';
+import IconButton from '@mui/material/IconButton';
+import Box from '@mui/material/Box';
+import DrawerAppBar from './components/DrawerAppBar/DrawerAppBar';
 
 
-const App = () => {
+
+
+const ColorModeContext = React.createContext({ toggleColorMode: () => {}});
+const ToggleColorMode = () => {
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const [mode, setMode] = React.useState(prefersDarkMode ? 'dark' : 'light');
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+      },
+    }),
+    [],
+  );
+
+  const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
+  
   return (
-    <>
-      <Header />
-      <Nav />
-      <About />
-      <TwoColumns />
-      <Experience />
-      <Services />
-      <Portfolio />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </>
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        
+        <Container maxWidth="lg">
+          <App />
+          <main>This is the beginning of the new layout</main>
+          
+        </Container>
+        
+      </ThemeProvider>
+    </ColorModeContext.Provider>
+  )
+}
+const App = () => {
+  const theme = useTheme();
+  const colorMode = React.useContext(ColorModeContext);
+
+  return (
+    <DrawerAppBar theme={theme} colorMode={colorMode} />
   )
 }
 
-export default App
+export default ToggleColorMode;
 

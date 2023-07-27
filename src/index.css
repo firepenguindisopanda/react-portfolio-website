@@ -36,15 +36,12 @@ html{
   background-color: #40464d;
 }
 
-body{
+/* body{
   background: var(--bg-color);
   color: var(--color-white);
   line-height: 1.7;
-  /*background-image: url(../src/assets/pexels-cottonbro-4646214.jpg);*/
   font-family: "Lora", serif;
 }
-
-/*General Styles*/
 
 .container{
   width: var(--container-width-lg);
@@ -118,7 +115,6 @@ img {
   object-fit: cover;
 }
 
-/*media queries medium devices*/
 @media screen and (max-width: 992px) {
   .container{
     width: var(--container-width-md);
@@ -128,7 +124,6 @@ img {
   }
 }
 
-/*media queries small devices*/
 @media screen and (max-width: 768px) {
   .container{
     width: var(--container-width-sm);
@@ -142,4 +137,5 @@ img {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} 
+*/
