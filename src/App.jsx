@@ -35,7 +35,7 @@ const ToggleColorMode = () => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" sx={{p: 2}}>
           <App />
           <main>This is the beginning of the new layout</main>
           <AboutMe />
