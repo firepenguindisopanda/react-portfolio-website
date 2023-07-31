@@ -1,6 +1,7 @@
 import React from 'react'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import { CPlusPlus, Android, Javascript, Python, Windows } from '../SvgIcons';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import SvgIcon from '@mui/material/SvgIcon';
@@ -15,6 +16,7 @@ const TechnicalSkills = () => {
             bgcolor: 'background.paper',
             borderRadius: '12px',
             boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+            height: '100vh',
         }}>
             <Grid container spacing={3}>
                 <Grid item xs={12} sx={{
@@ -23,7 +25,7 @@ const TechnicalSkills = () => {
                     alignItems: 'center',
                     flexDirection: 'row',
                 }}>
-                    <ConstructionIcon /><h1>Technical Skills</h1><ConstructionIcon />
+                    <ConstructionIcon /><Typography variant="h4" component="h1">Technical Skills</Typography><ConstructionIcon />
                 </Grid>
                 <Grid
                     item
@@ -34,35 +36,39 @@ const TechnicalSkills = () => {
                         justifyContent: 'center',
                         alignItems: 'center',
                         gap: '1rem',
+                        flexWrap: 'wrap', // Allow icons to wrap when the screen size is small
                     }}
                 >
-                    {/* Wrapping CPlusPlus icon with a container to control its size */}
-                    <div style={{ width: '50px', height: '50px' }}>
-                        <CPlusPlus colour="brown" />
+                    {/* Wrapping each icon with a container to control its size and add text below */}
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <CPlusPlus colour="brown" />
+                        </div>
+                        <Typography variant="body2">C++</Typography>
                     </div>
-                    <div style={{ width: '50px', height: '50px'}}>
-                        <Android colour="green" />
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <Android colour="green" />
+                        </div>
+                        <Typography variant="body2">Android</Typography>
                     </div>
-                    {/* <div style={{width: '50px', height: '50px'}}>
-                        <SvgIcon
-                        sx={{
-                            '&:hover': { transform: 'scale(1.2)', transition: 'transform 0.2s ease' },
-                            'height': '100%',
-                            'width': '100%',
-                            'color': 'yellow',
-                        }}
-                        >
-                            <JavascriptIcon />
-                        </SvgIcon>
-                    </div> */}
-                    <div style={{ width: '50px', height: '50px' }}>
-                        <Javascript colour="yellow" />
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <Javascript colour="yellow" />
+                        </div>
+                        <Typography variant="body2">JavaScript</Typography>
                     </div>
-                    <div style={{ width: '50px', height: '50px' }}>
-                        <Python colour="blue" />
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <Python colour="blue" />
+                        </div>
+                        <Typography variant="body2">Python</Typography>
                     </div>
-                    <div style={{ width: '50px', height: '50px' }}>
-                        <Windows colour="lightblue" />
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <Windows colour="lightblue" />
+                        </div>
+                        <Typography variant="body2">Windows</Typography>
                     </div>
                 </Grid>
             </Grid>
