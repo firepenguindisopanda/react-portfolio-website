@@ -11,6 +11,7 @@ import { Container } from '@mui/material';
 import { getDesignTokens } from './utilities';
 import DrawerAppBar from './components/DrawerAppBar/DrawerAppBar';
 import AboutMe from './components/AboutMe/AboutMe';
+import TechnicalSkills from './components/TechnicalSkills/TechnicalSkills';
 
 
 
@@ -39,7 +40,7 @@ const ToggleColorMode = () => {
           <App />
           <main>This is the beginning of the new layout</main>
           <AboutMe />
-          
+          <TechnicalSkills />
         </Container>
         
       </ThemeProvider>

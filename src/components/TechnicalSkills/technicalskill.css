@@ -1,0 +1,11 @@
+.animated-div {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    /* Define the transition property and duration */
+}
+
+.animated-div:hover {
+    transform: scale(1.5);
+    /* Apply the desired scale value on hover */
+}
