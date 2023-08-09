@@ -8,24 +8,24 @@ import Typography from '@mui/material/Typography';
 
 const CertificateCard = ({ certificate }) => {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, width: 345 }}>
             <CardMedia
-                sx={{ height: 240 }}
+                sx={{ height: 250, width: '100%', objectFit: 'cover' }}
                 image={certificate.image}
                 title="green iguana"
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                    Lizard
+                    <div style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '100%' }}>
+                        {certificate.name}
+                    </div>
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
-                </Typography>
+                {/* <Typography variant="body2" color="text.secondary">
+                    {certificate.description}
+                </Typography> */}
             </CardContent>
             <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small" href={certificate.URL} target="_blank" rel="noopener noreferrer">Learn More</Button>
             </CardActions>
         </Card>
     );

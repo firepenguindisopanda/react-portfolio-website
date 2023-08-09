@@ -24,56 +24,65 @@ const certificates = [
         id: 1,
         name: 'IT Automation with Python',
         description: 'A brief description',
-        image: PYTHONCERT
+        image: PYTHONCERT,
+        URL: 'https://coursera.org/share/6ca25b8304c98181f813ea21bd629e66'
 
     },
     {
         id: 2,
         name: 'Google IT Support',
         description: 'A brief description',
-        image: SUPPORTCERT
+        image: SUPPORTCERT,
+        URL: 'https://coursera.org/share/187b52eb3a16416812a97b36381e17d5'
     },
     {
         id: 3,
         name: 'It Automation with Python Badge',
         description: 'A brief description',
-        image: PYTHONBADGE
+        image: PYTHONBADGE,
+        URL: 'https://www.credly.com/badges/0b73e2c3-3795-4343-a1fa-260e040bdc0a?source=linked_in_profile'
     },
     {
         id: 4,
         name: 'Google IT Support Badge',
         description: 'A brief description',
-        image: SUPPORTBADGE
+        image: SUPPORTBADGE,
+        URL: 'https://www.credly.com/badges/a734660f-1ece-4783-9e12-ca49d2933513?source=linked_in_profile'
     },
     {
         id: 5,
         name: 'Automate Real world Task with Python',
         description: 'A brief description',
-        image: AUTOPYTHON
+        image: AUTOPYTHON,
+        URL: ''
     },
     {
         id: 6,
         name: 'The bits and bytes of Computer Networking',
         description: 'A brief description',
-        image: BYTESNET
+        image: BYTESNET,
+        URL: 'https://coursera.org/share/2a34e51a721220545bc3dd8bc576c093'
     },
     {
         id: 7,
         name: 'Configure and Manage Cloud',
         description: 'A brief description',
-        image: CONIFGCLOUD
+        image: CONIFGCLOUD,
+        URL: ''
     },
     {
         id: 8,
         name: 'Crash Course in Python',
         description: 'A brief description',
-        image: CRASHPYTHON
+        image: CRASHPYTHON,
+        URL: ''
     },
     {
         id: 9,
         name: 'Finals of ICPC Caribbean',
         description: 'A brief description',
-        image: ICPC
+        image: ICPC,
+        URL: ''
     }
 ]
 
@@ -82,9 +91,8 @@ const TechnicalSkills = () => {
         <Box sx={{
             flexGrow: 1,
             p: 2,
-            m: 2,
             bgcolor: 'background.paper',
-            borderRadius: '12px',
+            borderRadius: '.5rem',
             boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
         }}>
             <Grid container spacing={1}>
