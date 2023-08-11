@@ -91,8 +91,9 @@ const TechnicalSkills = () => {
         <Box sx={{
             flexGrow: 1,
             p: 2,
+            marginTop: '1rem',
             bgcolor: 'background.paper',
-            borderRadius: '.5rem',
+            borderRadius: '.25rem',
             boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
         }}>
             <Grid container spacing={1}>
@@ -101,8 +102,10 @@ const TechnicalSkills = () => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     flexDirection: 'row',
+                    marginBottom: '1rem',
+                    borderBottom: '1px solid #ccc',
                 }}>
-                    <ConstructionIcon /><Typography variant="h4" component="h1">Technical Skills</Typography><ConstructionIcon />
+                    <ConstructionIcon sx={{marginBottom: '1rem'}} /><Typography variant="h4" component="h1" sx={{marginBottom: '1rem', marginRight: '1rem', marginLeft: '1rem'}}>Technical Skills</Typography><ConstructionIcon sx={{marginBottom: '1rem'}} />
                 </Grid>
                 <Grid
                     item
@@ -113,8 +116,7 @@ const TechnicalSkills = () => {
                         justifyContent: 'space-between',
                         alignItems: 'center',
                         flexDirection: 'row',
-                        boxShadow: '2px 13px 15px -13px rgba(255, 105, 135, .3)',
-                        
+                        marginBottom: '1rem',
                         flexWrap: 'wrap', // Allow icons to wrap when the screen size is small
                     }}
                 >

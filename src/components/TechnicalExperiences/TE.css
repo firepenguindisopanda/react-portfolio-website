@@ -1,0 +1,10 @@
+.MuiBadge-rectangularBadge {
+    background-color: green;
+    /* Set the background color */
+    color: white;
+    /* Set the text color */
+    border-radius: 4px;
+    /* Add rounded border */
+    padding: 2px 6px;
+    /* Add padding */
+}

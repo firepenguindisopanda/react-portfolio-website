@@ -12,6 +12,8 @@ import { getDesignTokens } from './utilities';
 import DrawerAppBar from './components/DrawerAppBar/DrawerAppBar';
 import AboutMe from './components/AboutMe/AboutMe';
 import TechnicalSkills from './components/TechnicalSkills/TechnicalSkills';
+import TechnicalExperiences from './components/TechnicalExperiences/TechnicalExperiences';
+import Projects from './components/Projects/Projects';
 
 
 
@@ -41,6 +43,8 @@ const ToggleColorMode = () => {
           <main>This is the beginning of the new layout</main>
           <AboutMe />
           <TechnicalSkills />
+          <TechnicalExperiences />
+          <Projects />
         </Container>
         
       </ThemeProvider>
