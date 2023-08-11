@@ -4,8 +4,6 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { CPlusPlus, Android, Javascript, Python, Windows, Java } from '../SvgIcons';
 import ConstructionIcon from '@mui/icons-material/Construction';
-import SvgIcon from '@mui/material/SvgIcon';
-import JavascriptIcon from '@mui/icons-material/Javascript';
 import PYTHONCERT from '../../assets/cert_it_auto_python.png'
 import SUPPORTCERT from '../../assets/cert_it_support.png'
 import PYTHONBADGE from '../../assets/cert_badge.png'
@@ -16,7 +14,6 @@ import CONIFGCLOUD from '../../assets/config_manage_cloud.png'
 import CRASHPYTHON from '../../assets/crash_course_python.png'
 import ICPC from '../../assets/icpc_caribbean_finals.png'
 import CertificateCard from './CertificateCard';
-import { Divider } from '@mui/material';
 
 
 const certificates = [
