@@ -58,7 +58,7 @@ const Projects = () => {
                         <Box width="50%" height="60px">
                             <img src={FLASK} alt="Flask Logo" style={{ width: '100%', height: '100%' }} />
                         </Box>
-                        <Box width="50%" height="60px">
+                        <Box width="100%" height="60px">
                             <img src={JINJA} alt="Jinja Logo" style={{ width: '100%', height: '100%' }} />
                         </Box>
                         <Box width="50%" height="60px">
