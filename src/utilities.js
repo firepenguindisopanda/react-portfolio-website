@@ -2,7 +2,6 @@ import {
     purple,
     cyan,
     grey,
-    blue,
     green,
     indigo,
     red,
@@ -31,12 +30,12 @@ export const getDesignTokens = (mode) => ({
                 },
             }
             : {
-                primary: purple,
+                primary: grey,
                 secondary: deepOrange, // Dark mode accent color
                 divider: red[700],
                 background: {
-                    default: purple[900],
-                    paper: purple[900],
+                    default:grey[900],
+                    paper:grey[900],
                 },
                 text: {
                     primary: '#fff',
