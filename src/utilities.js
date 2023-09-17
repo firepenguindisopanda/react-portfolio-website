@@ -22,8 +22,8 @@ export const getDesignTokens = (mode) => ({
                     secondary: grey[800],
                 },
                 background: {
-                    default: '#f5f5f5',
-                    paper: '#fff',
+                    default: '#f6f6f6', // Default light background color
+                    paper: '#f0f0f0',   // Light paper background color
                 },
                 action: {
                     active: grey[600],
@@ -34,8 +34,8 @@ export const getDesignTokens = (mode) => ({
                 secondary: deepOrange, // Dark mode accent color
                 divider: red[700],
                 background: {
-                    default:grey[900],
-                    paper:grey[900],
+                    default: grey[900],
+                    paper: grey[900],
                 },
                 text: {
                     primary: '#fff',

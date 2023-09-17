@@ -113,7 +113,7 @@ function DrawerAppBar(props) {
             <Box component="nav">
                 <Drawer
                     container={container}
-                    variant="primary"
+                    variant="permanent"
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
                     ModalProps={{

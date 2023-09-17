@@ -158,8 +158,8 @@ const TechnicalExperiences = () => {
             typography: 'body1'
         }}>
             <Box>
-                <Typography variant="h4" component="h1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-                    <WorkOutlineIcon /><Typography variant="h4" component="h1" sx={{ marginRight: '1rem', marginLeft: '1rem' }}>Technical Experience</Typography><WorkOutlineIcon />
+                <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
+                    <WorkOutlineIcon /><Typography variant="h4" component="span" sx={{ marginRight: '1rem', marginLeft: '1rem' }}>Technical Experience</Typography><WorkOutlineIcon />
                 </Typography>
             </Box>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -167,7 +167,7 @@ const TechnicalExperiences = () => {
                     {
                         TechnicalExperience.map((item) => {
                             return (
-                                <Tab label={item.title} {...a11yProps(item.value)} />
+                                <Tab key={item.title} label={item.title} {...a11yProps(item.value)} />
                             )
                         })
                     }
@@ -177,7 +177,7 @@ const TechnicalExperiences = () => {
                 TechnicalExperience.map((item) => {
                     return (
                         <CustomTabPanel value={value} index={item.value} key={item.value}>
-                            {item.title}
+                            <Typography variant="h5" component="div">{item.title}</Typography>
                             <Grid container spacing={2}>
                                 {item.membersOf.map((skill) => (
                                     <Grid item xs={6} sm={4} md={3} key={skill}>
@@ -198,7 +198,7 @@ const TechnicalExperiences = () => {
                                                 },
                                             }}
                                         >
-                                            <Typography variant="h6" component="h1" sx={{ marginRight: '1rem', marginLeft: '1rem' }}>
+                                            <Typography variant="h6" component="div" sx={{ marginRight: '1rem', marginLeft: '1rem' }}>
                                                 {skill}
                                             </Typography>
                                             <Badge // Add Badge component for the green badge
@@ -212,7 +212,6 @@ const TechnicalExperiences = () => {
                                                     right: 15,
                                                     transform: 'rotate(45deg)', // Rotate the badge diagonally
                                                     borderRadius: '0px',
-                                                    
                                                     padding: '4px 8px',
                                                 }}
                                             />

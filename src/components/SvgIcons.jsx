@@ -62,7 +62,7 @@ export const Windows = ({ colour }) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 291.346 291.346" xmlSpace="preserve" fill={colour}>
             <path d="M117.547 266.156 0 249.141v-94.296h117.547v111.311z" data-original="#26A6D1" data-old_color="#26A6D1"></path>
-            <path d="M291.346 136.51H136.31l.055-114.06L291.346.009V136.51z" data-original="#3DB39E" data-old_color="#3DB39E"></path><path d="m291.346 291.337-155.091-22.459.182-114.015h154.909v136.474z" data-original="#F4B459" class="active-path" data-old_color="#F4B459"></path><path d="M117.547 136.51H0V42.205l117.547-17.024V136.51z" data-original="#E2574C" data-old_color="#E2574C">
+            <path d="M291.346 136.51H136.31l.055-114.06L291.346.009V136.51z" data-original="#3DB39E" data-old_color="#3DB39E"></path><path d="m291.346 291.337-155.091-22.459.182-114.015h154.909v136.474z" data-original="#F4B459" className="active-path" data-old_color="#F4B459"></path><path d="M117.547 136.51H0V42.205l117.547-17.024V136.51z" data-original="#E2574C" data-old_color="#E2574C">
             </path>
         </svg>
     )

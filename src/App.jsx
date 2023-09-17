@@ -14,6 +14,7 @@ import AboutMe from './components/AboutMe/AboutMe';
 import TechnicalSkills from './components/TechnicalSkills/TechnicalSkills';
 import TechnicalExperiences from './components/TechnicalExperiences/TechnicalExperiences';
 import Projects from './components/Projects/Projects';
+import WorkExperience from './components/WorkExperience/WorkExperience';
 
 
 
@@ -40,11 +41,12 @@ const ToggleColorMode = () => {
         
         <Container maxWidth="lg" sx={{p: 2}}>
           <App />
-          <main>This is the beginning of the new layout</main>
+          <main>NEW LAYOUT</main>
           <AboutMe />
           <TechnicalSkills />
           <TechnicalExperiences />
           <Projects />
+          <WorkExperience />
         </Container>
         
       </ThemeProvider>
