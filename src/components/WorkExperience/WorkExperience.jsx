@@ -31,7 +31,24 @@ const webThreeProject = [
     }
 ];
 
-const beuwiProjectJan = [];
+const beuwiProjectJan = [
+    {
+        id: 1,
+        details: "Updated existing Angular Applications to the latest version, fixing errors that occured.",
+    },
+    {
+        id: 2,
+        details: "Updated existing search feature to autocomplete search."
+    },
+    {
+        id: 3,
+        details: "Identified and fixed bugs with the existing application. The fix contributed to the overall user experience of the application."
+    },
+    {
+        id: 4,
+        details: "Changed CircleCI workflow to Github Actions."
+    }
+];
 
 const beuwiProjectMay = [
     {
@@ -212,6 +229,47 @@ const WorkExperience = () => {
                     <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'right', alignItems: 'right', flexDirection: 'row', paddingRight: '1rem' }}>
                         <Typography variant="h6" component="span">January, 2022</Typography>
                     </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                    <Typography sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
+                        Technologies Used:
+                    </Typography>
+                </Grid>
+                <Grid item xs={8}
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center',  // Center horizontally
+                        alignItems: 'center',
+                        flexDirection: 'row',
+                        flexWrap: 'wrap', // Allow icons to wrap when the screen size is small
+                    }}
+                >
+                </Grid>
+                <Grid item xs={12} md={12} lg={12}>
+                    <List
+                        sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper' }}
+                        component="nav"
+                        aria-labelledby="nested-list-subheader"
+                        subheader={
+                            <ListSubheader component="div" id="nested-list-subheader">
+                                <ChecklistIcon />List of tasks completed
+                            </ListSubheader>
+                        }
+                    >
+                        {
+                            beuwiProjectJan.map((task) => {
+                                return (
+                                    <ListItemButton key={task.id}>
+                                        <ListItemIcon>
+                                            <DoneIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary={task.details} />
+                                    </ListItemButton>
+                                )
+                            })
+                        }
+
+                    </List>
                 </Grid>
             </Grid>
         </Box>
