@@ -4,9 +4,8 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import Link from '@mui/material/Link';
-import FLASK from '../../assets/flask-logo-png-transparent.png';
 import JINJA from '../../assets/jinja-logo.png';
-import HEROKU from '../../assets/hosting_heroku.png';
+import { Heroku, Flask } from '../SvgIcons';
 import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -107,15 +106,27 @@ const Projects = () => {
                     }}
                 >
                     <Box display="flex" alignItems="center" gap={2}>
-                        <Box width="50%" height="60px">
+                        {/* <Box width="50%" height="60px">
                             <img src={FLASK} alt="Flask Logo" style={{ width: '100%', height: '100%' }} />
-                        </Box>
+                        </Box> */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <div style={{ width: '55px', height: '55px' }}>
+                                <Flask colour="lightgreen" />
+                            </div>
+                            <Typography variant="body2">Flask</Typography>
+                        </div>
                         <Box width="100%" height="60px">
                             <img src={JINJA} alt="Jinja Logo" style={{ width: '100%', height: '100%' }} />
                         </Box>
-                        <Box width="50%" height="60px">
+                        {/* <Box width="50%" height="60px">
                             <img src={HEROKU} alt="Heroku Logo" style={{ width: '100%', height: '100%' }} />
-                        </Box>
+                        </Box> */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <div style={{ width: '50px', height: '50px' }}>
+                                <Heroku colour="lightgreen" />
+                            </div>
+                            <Typography variant="body2">Heroku</Typography>
+                        </div>
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={12} lg={12}>

@@ -2,7 +2,27 @@ import React from 'react'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import { CPlusPlus, Android, Javascript, Python, Windows, Java, Jenkins } from '../SvgIcons';
+import { 
+    CPlusPlus, 
+    Android, 
+    Javascript, 
+    Python, 
+    Windows, 
+    Java, 
+    Jenkins, 
+    SpringBoot,
+    Flask,
+    Heroku,
+    Angular,
+    MaterialUi,
+    Bootstrap,
+    ReactIcon,
+    NodejsIcon,
+    PostgresqlIcon,
+    FirebaseIcon,
+    GitIcon,
+    DockerIcon
+} from '../SvgIcons';
 import ConstructionIcon from '@mui/icons-material/Construction';
 
 const TechnicalSkills = () => {
@@ -24,7 +44,7 @@ const TechnicalSkills = () => {
                     marginBottom: '1rem',
                     borderBottom: '1px solid #ccc',
                 }}>
-                    <ConstructionIcon sx={{marginBottom: '1rem'}} /><Typography variant="h4" component="h1" sx={{marginBottom: '1rem', marginRight: '1rem', marginLeft: '1rem'}}>Technical Skills</Typography><ConstructionIcon sx={{marginBottom: '1rem'}} />
+                    <ConstructionIcon sx={{marginBottom: '1rem'}} /><Typography variant="h4" component="h1" sx={{marginBottom: '1rem', marginRight: '1rem', marginLeft: '1rem'}}>Technologies Used</Typography><ConstructionIcon sx={{marginBottom: '1rem'}} />
                 </Grid>
                 <Grid
                     item
@@ -35,7 +55,7 @@ const TechnicalSkills = () => {
                         justifyContent: 'space-between',
                         alignItems: 'center',
                         flexDirection: 'row',
-                        marginBottom: '1rem',
+                        marginBottom: '2rem',
                         flexWrap: 'wrap', // Allow icons to wrap when the screen size is small
                     }}
                 >
@@ -81,6 +101,108 @@ const TechnicalSkills = () => {
                             <Jenkins colour="lightblue" />
                         </div>
                         <Typography variant="body2">Jenkins</Typography>
+                    </div>
+                </Grid>
+                <Grid
+                    item
+                    xs={12}
+                    md={12}
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        flexDirection: 'row',
+                        marginBottom: '2rem',
+                        flexWrap: 'wrap', // Allow icons to wrap when the screen size is small
+                    }}
+                >
+                    {/* Wrapping each icon with a container to control its size and add text below */}
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <SpringBoot colour="lightgreen" />
+                        </div>
+                        <Typography variant="body2">Springboot</Typography>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <Flask colour="lightgreen" />
+                        </div>
+                        <Typography variant="body2">Flask</Typography>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <Heroku colour="lightgreen" />
+                        </div>
+                        <Typography variant="body2">Heroku</Typography>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <Angular colour="lightgreen" />
+                        </div>
+                        <Typography variant="body2">Angular Js</Typography>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <MaterialUi colour="lightgreen" />
+                        </div>
+                        <Typography variant="body2">Material UI</Typography>
+                    </div>
+                </Grid>
+                <Grid
+                    item
+                    xs={12}
+                    md={12}
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        flexDirection: 'row',
+                        marginBottom: '2rem',
+                        flexWrap: 'wrap', // Allow icons to wrap when the screen size is small
+                    }}
+                >
+                    {/* Wrapping each icon with a container to control its size and add text below */}
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <Bootstrap colour="lightgreen" />
+                        </div>
+                        <Typography variant="body2">Bootstrap</Typography>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <ReactIcon colour="lightgreen" />
+                        </div>
+                        <Typography variant="body2">React</Typography>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <NodejsIcon colour="lightgreen" />
+                        </div>
+                        <Typography variant="body2">Node Js</Typography>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <PostgresqlIcon colour="lightgreen" />
+                        </div>
+                        <Typography variant="body2">Postgresql</Typography>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <FirebaseIcon colour="lightgreen" />
+                        </div>
+                        <Typography variant="body2">Firebase</Typography>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <GitIcon colour="lightgreen" />
+                        </div>
+                        <Typography variant="body2">Git</Typography>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <DockerIcon colour="lightgreen" />
+                        </div>
+                        <Typography variant="body2">Docker</Typography>
                     </div>
                 </Grid>
                 

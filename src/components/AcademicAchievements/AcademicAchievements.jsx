@@ -9,12 +9,13 @@ import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import Grid from '@mui/material/Grid';
-import ConstructionIcon from '@mui/icons-material/Construction';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
 import SchoolIcon from '@mui/icons-material/School';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
-import CertificateCard from '../TechnicalSkills/CertificateCard'
 
 import PYTHONCERT from '../../assets/cert_it_auto_python.png'
 import SUPPORTCERT from '../../assets/cert_it_support.png'
@@ -203,10 +204,69 @@ const AcademicAchievements = () => {
                             />
                         </Box>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} md={6}>
                         {/* Right section */}
-                        {/* Add your content for the right section here */}
-                        Right Section Content
+                        <Grid container spacing={2}>
+                            <Grid item xs={12} md={6} lg={6}>
+                                <Card sx={{ minWidth: 275 }}>
+                                    <CardContent>
+                                        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                                            Udacity Scholarship - AI Programming with Python Nanodegree
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions>
+                                        <Button size="small">Learn More</Button>
+                                    </CardActions>
+                                </Card>
+                            </Grid>
+                            <Grid item xs={12} md={6} lg={6}>
+                                <Card sx={{ minWidth: 275 }}>
+                                    <CardContent>
+                                        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                                            Google Certificates Scholarship
+                                        </Typography>
+                                        <Typography variant="body2">
+                                            Google IT Support Certificate
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions>
+                                        <Button size="small">Learn More</Button>
+                                    </CardActions>
+                                </Card>
+                            </Grid>
+                            <Grid item xs={12} md={6} lg={6}>
+                                <Card sx={{ minWidth: 275 }}>
+                                    <CardContent>
+                                        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                                            Google Certificates Scholarship
+                                        </Typography>
+                                        <Typography variant="body2">
+                                            Google IT Automation Certificate
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions>
+                                        <Button size="small">Learn More</Button>
+                                    </CardActions>
+                                </Card>
+                            </Grid>
+                            <Grid item xs={12} md={6} lg={6}>
+                                <Card sx={{ minWidth: 275 }}>
+                                    <CardContent>
+                                        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                                            WiDS (Women In Data Science) Competition
+                                        </Typography>
+                                        <Typography variant="body2">
+                                            WiDS 2023 Competition - Placed 183rd out 697 teams
+                                            <br />
+                                            WiDS T&T Local Chapter - Placed 2nd.
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions>
+                                        <Button size="small">Learn More</Button>
+                                    </CardActions>
+                                </Card>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Box>
