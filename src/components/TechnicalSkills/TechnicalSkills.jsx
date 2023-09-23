@@ -21,7 +21,10 @@ import {
     PostgresqlIcon,
     FirebaseIcon,
     GitIcon,
-    DockerIcon
+    DockerIcon,
+    AWSIcon,
+    NginxIcon,
+    GCPIcon
 } from '../SvgIcons';
 import ConstructionIcon from '@mui/icons-material/Construction';
 
@@ -204,6 +207,40 @@ const TechnicalSkills = () => {
                         </div>
                         <Typography variant="body2">Docker</Typography>
                     </div>
+                </Grid>
+                <Grid
+                    item
+                    xs={12}
+                    md={12}
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        flexDirection: 'row',
+                        marginBottom: '2rem',
+                        flexWrap: 'wrap', // Allow icons to wrap when the screen size is small
+                    }}
+                >
+                    {/* Wrapping each icon with a container to control its size and add text below */}
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <NginxIcon colour="lightgreen" />
+                        </div>
+                        <Typography variant="body2">NGINX</Typography>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <AWSIcon colour="lightgreen" />
+                        </div>
+                        <Typography variant="body2">Amazon Web Services</Typography>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ width: '50px', height: '50px' }}>
+                            <GCPIcon colour="lightgreen" />
+                        </div>
+                        <Typography variant="body2">Google Compute Engine</Typography>
+                    </div>
+                    
                 </Grid>
                 
             </Grid>
