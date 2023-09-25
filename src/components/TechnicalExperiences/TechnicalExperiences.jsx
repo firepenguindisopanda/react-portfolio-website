@@ -158,7 +158,7 @@ const TechnicalExperiences = () => {
             borderRadius: '.25rem',
             boxShadow: '0 3px 5px 2px rgba(46, 204, 113, 0.3)',
             width: '100%',
-            height: '80vh',
+            height: '100%',
             typography: 'body1'
         }}>
             <Box>

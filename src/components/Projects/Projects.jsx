@@ -86,12 +86,12 @@ const Projects = () => {
                 </Typography>
             </Box>
             <Grid container spacing={2}>
-                <Grid item xs={8}>
+                <Grid item xs={12} md={8}>
                     <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
                         <Typography variant="h4" component="span">Recipe App</Typography>
                     </Typography>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} md={4}>
                     <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row' }}>
                         <Link href="https://github.com/firepenguindisopanda/recipe-board" underline="hover" >
                             <Typography variant="h4" component="span">RecipeApp Repository</Typography>
@@ -161,14 +161,14 @@ const Projects = () => {
                 </Grid>
             </Grid>
             <Grid container spacing={2} sx={{ marginTop: 2 }}>
-                <Grid item xs={8}>
+                <Grid item xs={12} md={8}>
                     <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
                         <Link href="https://focused-neumann-3db077.netlify.app/" underline="hover">
                             <Typography variant="h4" component="span">Movie App</Typography>
                         </Link>
                     </Typography>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} md={4}>
                     <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row' }}>
                         <Link href="https://github.com/firepenguindisopanda/DCIT-Movie-App" underline="hover" >
                             <Typography variant="h4" component="span">MovieApp Repository</Typography>
@@ -235,14 +235,14 @@ const Projects = () => {
                 </Grid>
             </Grid>
             <Grid container spacing={2} sx={{ marginTop: 2 }}>
-                <Grid item xs={8}>
+                <Grid item xs={12} md={8}>
                     <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
                         <Link href="https://nicksportfolio.tech/" underline="hover">
                             <Typography variant="h4" component="span">Portfolio Website</Typography>
                         </Link>
                     </Typography>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} md={4}>
                     <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row' }}>
                         <Link href="https://github.com/firepenguindisopanda/react-portfolio-website" underline="hover" >
                             <Typography variant="h4" component="span">Portfolio Repository</Typography>
