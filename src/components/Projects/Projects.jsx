@@ -98,12 +98,12 @@ const Projects = () => {
                         </Link>
                     </Typography>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={6}>
                     <Typography sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
                         Technologies Used: Jinja, Flask, Heroku
                     </Typography>
                 </Grid>
-                <Grid item xs={8}
+                <Grid item xs={6}
                     sx={{
                         display: 'flex',
                         justifyContent: 'center',  // Center horizontally
@@ -113,21 +113,18 @@ const Projects = () => {
                     }}
                 >
                     <Box display="flex" alignItems="center" gap={2}>
-                        {/* <Box width="50%" height="60px">
-                            <img src={FLASK} alt="Flask Logo" style={{ width: '100%', height: '100%' }} />
-                        </Box> */}
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                             <div style={{ width: '55px', height: '55px' }}>
                                 <Flask colour="lightgreen" />
                             </div>
                             <Typography variant="body2">Flask</Typography>
                         </div>
-                        <Box width="100%" height="60px">
-                            <img src={JINJA} alt="Jinja Logo" style={{ width: '100%', height: '100%' }} />
-                        </Box>
-                        {/* <Box width="50%" height="60px">
-                            <img src={HEROKU} alt="Heroku Logo" style={{ width: '100%', height: '100%' }} />
-                        </Box> */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <div style={{ width: '55px', height: '55px' }}>
+                                <img src={JINJA} alt="Jinja Logo" style={{ width: '100%', height: '100%' }} />
+                            </div>
+                            <Typography variant="body2">Jinja</Typography>
+                        </div>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                             <div style={{ width: '50px', height: '50px' }}>
                                 <Heroku colour="lightgreen" />
