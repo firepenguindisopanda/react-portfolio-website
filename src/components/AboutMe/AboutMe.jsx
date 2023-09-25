@@ -72,12 +72,12 @@ const AboutMe = () => {
             </Typography>
             <Divider />
             <Typography variant="body1" paragraph>
-              1+ Years Working
+              1+ Years Working Experience
             </Typography>
           </Item>
           <Item>
             <Typography variant="h6" gutterBottom>
-              Skills
+              Problem Solving Websites
             </Typography>
             <Divider />
             <Box display="flex" justifyContent="space-between">

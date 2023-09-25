@@ -11,10 +11,9 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import RESUME from '../../assets/NicholasSmith_Resume.pdf';
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
-// import panda-struggle from '../../assets/panda-struggle.svg
 import PANDA from '../../assets/panda-struggle.svg';
 
 import Brightness4Outlined from '@mui/icons-material/Brightness4Outlined';
@@ -99,6 +98,10 @@ function DrawerAppBar(props) {
                     />
 
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        {/* Button with text view Resume when clicked will open up in a new tab the pdf RESUME */}
+                        <Button href={RESUME} target="_blank" variant="outlined" color="secondary" sx={{ mr: 2 }}>
+                            View Resume
+                        </Button>
                         {navItems.map((item) => (
                             <Button key={item} sx={{ color: '#fff' }}>
                                 {item}
