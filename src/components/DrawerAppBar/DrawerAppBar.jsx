@@ -28,7 +28,7 @@ function DrawerAppBar(props) {
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
-        setMobileOpen((prevState) => !prevState);
+        setMobileOpen(!mobileOpen);
     };
 
     const drawer = (
@@ -78,7 +78,7 @@ function DrawerAppBar(props) {
                             aria-label="open drawer"
                             edge="start"
                             onClick={handleDrawerToggle}
-                            sx={{ mr: 2 }}
+                            sx={{ mr: 2, color: 'grey' }}
                         >
                             <MenuIcon />
                         </IconButton>
@@ -116,7 +116,7 @@ function DrawerAppBar(props) {
             <Box component="nav">
                 <Drawer
                     container={container}
-                    variant="permanent"
+                    variant="temporary"
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
                     ModalProps={{
