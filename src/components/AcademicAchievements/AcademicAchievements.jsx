@@ -26,6 +26,7 @@ import BYTESNET from '../../assets/bytes_bits_comp_net.png'
 import CONIFGCLOUD from '../../assets/config_manage_cloud.png'
 import CRASHPYTHON from '../../assets/crash_course_python.png'
 import ICPC from '../../assets/icpc_caribbean_finals.png'
+import OSPOWERUSER from '../../assets/os_pow_user.png'
 
 const certificates = [
     {
@@ -91,6 +92,13 @@ const certificates = [
         description: 'A brief description',
         imgPath: ICPC,
         URL: ''
+    },
+    {
+        id: 10,
+        label: 'OS Power User',
+        description: 'A brief description',
+        imgPath: OSPOWERUSER,
+        URL: ''
     }
 ]
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
@@ -124,7 +132,10 @@ const AcademicAchievements = () => {
                     borderBottom: '1px solid #ccc',
                 }}>
                     <SchoolIcon sx={{ marginBottom: '1rem', marginRight: '1rem' }} />
-                    <Typography variant="h4" component="h1" sx={{ marginBottom: '1rem' }}>
+                    <Typography variant="h4" component="h1" sx={{ 
+                        marginBottom: '1rem',
+                        fontFamily: 'Croissant One, cursive'
+                        }}>
                         Academic Achievements
                     </Typography>
                     <SchoolIcon sx={{ marginBottom: '1rem', marginLeft: '1rem' }} />
@@ -204,14 +215,17 @@ const AcademicAchievements = () => {
                             />
                         </Box>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} sx={{paddingTop: '2rem'}}>
                         {/* Right section */}
-                        <Grid container spacing={2}>
+                        <Grid container spacing={3}>
                             <Grid item xs={12} md={6} lg={6}>
                                 <Card sx={{ minWidth: 275 }}>
                                     <CardContent>
                                         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                                            Udacity Scholarship - AI Programming with Python Nanodegree
+                                            Udacity Scholarship
+                                        </Typography>
+                                        <Typography variant="body2">
+                                            AI Programming with Python Nanodegree
                                         </Typography>
                                     </CardContent>
                                     <CardActions>

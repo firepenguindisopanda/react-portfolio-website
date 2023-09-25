@@ -2,10 +2,8 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import Link from '@mui/material/Link';
 import JINJA from '../../assets/jinja-logo.png';
-import { Heroku, Flask } from '../SvgIcons';
 import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -13,6 +11,15 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ChecklistIcon from '@mui/icons-material/Checklist';
 import DoneIcon from '@mui/icons-material/Done';
+import {
+    Flask,
+    Heroku,
+    Angular,
+    MaterialUi,
+    GithubIcon,
+    ReactIcon,
+    FirebaseIcon,
+} from '../SvgIcons';
 
 const recipeAppTasks = [
     {
@@ -75,7 +82,7 @@ const Projects = () => {
         >
             <Box sx={{ marginBottom: '2rem' }}>
                 <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-                    <AccountTreeIcon /><Typography variant="h4" component="span" sx={{ marginRight: '1rem', marginLeft: '1rem' }}>Technical Projects</Typography><AccountTreeIcon />
+                    <Typography variant="h4" component="span" sx={{ marginRight: '1rem', marginLeft: '1rem' }}>🚀 Technical Projects 🚀</Typography>
                 </Typography>
             </Box>
             <Grid container spacing={2}>
@@ -186,15 +193,21 @@ const Projects = () => {
                     }}
                 >
                     <Box display="flex" alignItems="center" gap={2}>
-                        <Box width="50%" height="60px">
-
-                        </Box>
-                        <Box width="100%" height="60px">
-
-                        </Box>
-                        <Box width="50%" height="60px">
-
-                        </Box>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <div style={{ width: '55px', height: '55px' }}>
+                                <Angular colour="lightgreen" />
+                            </div>
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <div style={{ width: '55px', height: '55px' }}>
+                                <MaterialUi colour="lightgreen" />
+                            </div>
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <div style={{ width: '55px', height: '55px' }}>
+                                <GithubIcon colour="lightgreen" />
+                            </div>
+                        </div>
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={12} lg={12}>
@@ -254,15 +267,21 @@ const Projects = () => {
                     }}
                 >
                     <Box display="flex" alignItems="center" gap={2}>
-                        <Box width="50%" height="60px">
-
-                        </Box>
-                        <Box width="100%" height="60px">
-
-                        </Box>
-                        <Box width="50%" height="60px">
-
-                        </Box>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <div style={{ width: '55px', height: '55px' }}>
+                                <ReactIcon colour="lightgreen" />
+                            </div>
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <div style={{ width: '55px', height: '55px' }}>
+                                <MaterialUi colour="lightgreen" />
+                            </div>
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <div style={{ width: '55px', height: '55px' }}>
+                                <FirebaseIcon colour="lightgreen" />
+                            </div>
+                        </div>
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={12} lg={12}>

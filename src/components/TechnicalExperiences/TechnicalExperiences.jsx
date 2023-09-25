@@ -5,7 +5,11 @@ import Typography from '@mui/material/Typography';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import Badge from '@mui/material/Badge';
 import PropTypes from 'prop-types';
-import { styled } from '@mui/material/styles';
+import FRONTENDGIF from '../../assets/frontend.gif'
+import TECHNICALTOOLS from '../../assets/technical-tools-68.png'
+import {
+    DataScience
+} from '../SvgIcons';
 import "./TE.css"
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -160,6 +164,17 @@ const TechnicalExperiences = () => {
             <Box>
                 <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
                     <WorkOutlineIcon /><Typography variant="h4" component="span" sx={{ marginRight: '1rem', marginLeft: '1rem' }}>Technical Experience</Typography><WorkOutlineIcon />
+                </Typography>
+                <Typography variant="body1" component="div" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row', marginBottom: '1rem' }}>
+                    <div style={{ width: '55px', height: '55px' }}>
+                        <img src={FRONTENDGIF} alt="frontend" className="frontend" width={55} height={55} />
+                    </div>
+                    <div style={{ width: '55px', height: '55px', marginLeft: '1rem' }}>
+                        <img src={TECHNICALTOOLS} alt="technical-tools" className="technical-tools" width={55} height={55} />
+                    </div>
+                    <div style={{ width: '55px', height: '55px', marginLeft: '1rem' }}>
+                        <DataScience colour="lightgreen" />
+                    </div>
                 </Typography>
             </Box>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>

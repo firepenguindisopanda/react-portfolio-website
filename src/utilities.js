@@ -1,9 +1,6 @@
 import {
-    purple,
     cyan,
     grey,
-    green,
-    indigo,
     red,
     amber, // Added for light mode accent color
     deepOrange, // Added for dark mode accent color
@@ -28,6 +25,12 @@ export const getDesignTokens = (mode) => ({
                 action: {
                     active: grey[600],
                 },
+                typography: {
+                    // Typography styles for dark mode
+                    h1: {
+                        fontFamily: 'Fira Sans, sans-serif'
+                    },
+                },
             }
             : {
                 primary: grey,
@@ -43,6 +46,12 @@ export const getDesignTokens = (mode) => ({
                 },
                 action: {
                     active: '#fff',
+                },
+                typography: {
+                    // Typography styles for dark mode
+                    h1: {
+                        fontFamily: 'Croissant One, cursive',
+                    },
                 },
             }),
     },

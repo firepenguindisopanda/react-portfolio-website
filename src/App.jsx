@@ -42,7 +42,6 @@ const ToggleColorMode = () => {
         
         <Container maxWidth="lg" sx={{p: 2}}>
           <App />
-          <main>NEW LAYOUT</main>
           <AboutMe />
           <TechnicalSkills />
           <TechnicalExperiences />
@@ -50,7 +49,6 @@ const ToggleColorMode = () => {
           <WorkExperience />
         </Container>
         <Container fluid maxWidth="xl" sx={{p: 2}}>
-          Other Section
           <AcademicAchievements />
         </Container>
         
