@@ -128,8 +128,7 @@ const AcademicAchievements = () => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     flexDirection: 'row',
-                    marginBottom: '1rem',
-                    borderBottom: '1px solid #ccc',
+                    marginBottom: '3rem',
                 }}>
                     <SchoolIcon sx={{ marginBottom: '1rem', marginRight: '1rem' }} />
                     <Typography variant="h4" component="h1" sx={{ 

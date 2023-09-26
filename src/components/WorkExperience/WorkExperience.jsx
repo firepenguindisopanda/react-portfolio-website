@@ -118,7 +118,7 @@ const WorkExperience = () => {
                             <CardContent>
                                 <Grid item xs={12}>
                                     <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
-                                        <Typography variant="h6" component="span">Independent Developer, UWI, Department of Computing Information Technology</Typography>
+                                        <Typography variant="h6" component="span">Independent Developer, UWI, Department of Computing and Information Technology</Typography>
                                     </Typography>
                                 </Grid>
                                 <Grid item xs={12} md={12} lg={12}>
@@ -208,7 +208,7 @@ const WorkExperience = () => {
                                 <Grid container spacing={2}>
                                     <Grid item xs={12}>
                                         <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
-                                            <Typography variant="h6" component="span">Independent Developer, UWI, Department of Computing Information Technology</Typography>
+                                            <Typography variant="h6" component="span">Independent Developer, UWI, Department of Computing and Information Technology</Typography>
                                         </Typography>
                                     </Grid>
                                     <Grid item xs={12} md={12} lg={12}>

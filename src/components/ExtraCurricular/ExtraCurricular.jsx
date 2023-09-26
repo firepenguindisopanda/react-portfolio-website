@@ -26,8 +26,7 @@ const ExtraCurricular = () => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     flexDirection: 'row',
-                    marginBottom: '1rem',
-                    borderBottom: '1px solid #ccc',
+                    marginBottom: '3rem',
                 }}
             >
                 <Typography variant="h4" component="h1" sx={{ marginBottom: '1rem', fontFamily: 'Croissant One, cursive' }}>
