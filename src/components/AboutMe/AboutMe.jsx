@@ -24,6 +24,15 @@ const AboutMe = () => {
   return (
     <Box>
       <Grid container spacing={2}>
+        <Grid item xs={12} sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+          marginBottom: '1rem',
+          marginTop: '3rem',
+        }}>
+        </Grid>
         {/* About Me */}
         <Grid item xs={12} md={8}>
           <Item>

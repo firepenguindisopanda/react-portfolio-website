@@ -16,6 +16,8 @@ import TechnicalExperiences from './components/TechnicalExperiences/TechnicalExp
 import Projects from './components/Projects/Projects';
 import WorkExperience from './components/WorkExperience/WorkExperience';
 import AcademicAchievements from './components/AcademicAchievements/AcademicAchievements';
+import ExtraCurricular from './components/ExtraCurricular/ExtraCurricular';
+import Contact from './components/contact/Contact';
 
 
 
@@ -50,6 +52,8 @@ const ToggleColorMode = () => {
         </Container>
         <Container fluid maxWidth="xl" sx={{p: 2}}>
           <AcademicAchievements />
+          <ExtraCurricular />
+          <Contact />
         </Container>
         
       </ThemeProvider>

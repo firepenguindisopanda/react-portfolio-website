@@ -143,7 +143,7 @@ const AcademicAchievements = () => {
 
                 {/* Left and Right sections */}
                 <Grid container>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} md={6}>
                         {/* Left section */}
                         <Box sx={{ maxWidth: 500, flexGrow: 1 }}>
                             <Paper

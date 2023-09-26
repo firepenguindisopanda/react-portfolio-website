@@ -1,9 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import ListSubheader from '@mui/material/ListSubheader';
 import ChecklistIcon from '@mui/icons-material/Checklist';
 import DoneIcon from '@mui/icons-material/Done';
@@ -82,196 +91,157 @@ const beuwiProjectMay = [
 ];
 
 const WorkExperience = () => {
-    const [showScrollbar, setShowScrollbar] = useState(true);
 
-    const handleScroll = (e) => {
-        const { scrollTop, scrollHeight, clientHeight } = e.target;
-        setShowScrollbar(scrollTop + clientHeight < scrollHeight);
-    };
     return (
-        <Box
-            onScroll={handleScroll}
-            sx={{
-                flexGrow: 1,
-                overflowY: showScrollbar ? 'auto' : 'hidden',
-                marginTop: 5,
-                pt: 5,
-                pb: 5,
-                maxHeight: '600px',
-                borderRadius: '.25rem',
-                boxShadow: '0 3px 5px 2px rgba(255, 140, 0, 0.3)',
-                '&::-webkit-scrollbar': {
-                    width: '8px',
-                },
-                '&::-webkit-scrollbar-thumb': {
-                    background: 'rgba(0, 0, 0, 0.2)',
-                },
-            }}
-        >
+
+        <Box sx={{
+            flexGrow: 1,
+            marginTop: 5,
+            pt: 5,
+            pb: 5,
+        }}>
             <Box sx={{ marginBottom: '2rem' }}>
                 <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
                     <WorkspacePremiumIcon /><Typography variant="h4" component="span" sx={{ marginRight: '1rem', marginLeft: '1rem' }}>Work Experiences</Typography><WorkspacePremiumIcon />
                 </Typography>
             </Box>
-            <Grid container spacing={2}>
-                <Grid item xs={8}>
-                    <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
-                        <Typography variant="h4" component="span">Independent Developer, UWI, Department of Computing Information Technology</Typography>
-                    </Typography>
-                </Grid>
-                <Grid item xs={4}>
-                    <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'right', alignItems: 'right', flexDirection: 'row', paddingRight: '1rem' }}>
-                        <Typography variant="h6" component="span">May - July, 2023</Typography>
-                    </Typography>
-                </Grid>
-                <Grid item xs={4}>
-                    <Typography sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
-                        Technologies Used:
-                    </Typography>
-                </Grid>
-                <Grid item xs={8}
-                    sx={{
-                        display: 'flex',
-                        justifyContent: 'center',  // Center horizontally
-                        alignItems: 'center',
-                        flexDirection: 'row',
-                        flexWrap: 'wrap', // Allow icons to wrap when the screen size is small
-                    }}
-                >
-                </Grid>
-                <Grid item xs={12} md={12} lg={12}>
-                    <List
-                        sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper' }}
-                        component="nav"
-                        aria-labelledby="nested-list-subheader"
-                        subheader={
-                            <ListSubheader component="div" id="nested-list-subheader">
-                                <ChecklistIcon />List of tasks completed
-                            </ListSubheader>
-                        }
-                    >
-                        {
-                            beuwiProjectMay.map((task) => {
-                                return (
-                                    <ListItemButton key={task.id}>
-                                        <ListItemIcon>
-                                            <DoneIcon />
-                                        </ListItemIcon>
-                                        <ListItemText primary={task.details} />
-                                    </ListItemButton>
-                                )
-                            })
-                        }
-
-                    </List>
-                </Grid>
-            </Grid>
-            <Grid container spacing={2}>
-                <Grid item xs={8}>
-                    <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
-                        <Typography variant="h4" component="span">Intern, UWI Department of Computing and Information Technology</Typography>
-                    </Typography>
-                </Grid>
-                <Grid item xs={4}>
-                    <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'right', alignItems: 'right', flexDirection: 'row', paddingRight: '1rem' }}>
-                        <Typography variant="h6" component="span">July - August, 2022</Typography>
-                    </Typography>
-                </Grid>
-                <Grid item xs={4}>
-                    <Typography sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
-                        Technologies Used:
-                    </Typography>
-                </Grid>
-                <Grid item xs={8}
-                    sx={{
-                        display: 'flex',
-                        justifyContent: 'center',  // Center horizontally
-                        alignItems: 'center',
-                        flexDirection: 'row',
-                        flexWrap: 'wrap', // Allow icons to wrap when the screen size is small
-                    }}
-                >
-                </Grid>
-                <Grid item xs={12} md={12} lg={12}>
-                    <List
-                        sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper' }}
-                        component="nav"
-                        aria-labelledby="nested-list-subheader"
-                        subheader={
-                            <ListSubheader component="div" id="nested-list-subheader">
-                                <ChecklistIcon />List of tasks completed
-                            </ListSubheader>
-                        }
-                    >
-                        {
-                            webThreeProject.map((task) => {
-                                return (
-                                    <ListItemButton key={task.id}>
-                                        <ListItemIcon>
-                                            <DoneIcon />
-                                        </ListItemIcon>
-                                        <ListItemText primary={task.details} />
-                                    </ListItemButton>
-                                )
-                            })
-                        }
-
-                    </List>
-                </Grid>
-            </Grid>
-            <Grid container spacing={2}>
-                <Grid item xs={8}>
-                    <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
-                        <Typography variant="h4" component="span">Independent Developer, UWI, Department of Computing Information Technology</Typography>
-                    </Typography>
-                </Grid>
-                <Grid item xs={4}>
-                    <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'right', alignItems: 'right', flexDirection: 'row', paddingRight: '1rem' }}>
-                        <Typography variant="h6" component="span">January, 2022</Typography>
-                    </Typography>
-                </Grid>
-                <Grid item xs={4}>
-                    <Typography sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
-                        Technologies Used:
-                    </Typography>
-                </Grid>
-                <Grid item xs={8}
-                    sx={{
-                        display: 'flex',
-                        justifyContent: 'center',  // Center horizontally
-                        alignItems: 'center',
-                        flexDirection: 'row',
-                        flexWrap: 'wrap', // Allow icons to wrap when the screen size is small
-                    }}
-                >
-                </Grid>
-                <Grid item xs={12} md={12} lg={12}>
-                    <List
-                        sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper' }}
-                        component="nav"
-                        aria-labelledby="nested-list-subheader"
-                        subheader={
-                            <ListSubheader component="div" id="nested-list-subheader">
-                                <ChecklistIcon />List of tasks completed
-                            </ListSubheader>
-                        }
-                    >
-                        {
-                            beuwiProjectJan.map((task) => {
-                                return (
-                                    <ListItemButton key={task.id}>
-                                        <ListItemIcon>
-                                            <DoneIcon />
-                                        </ListItemIcon>
-                                        <ListItemText primary={task.details} />
-                                    </ListItemButton>
-                                )
-                            })
-                        }
-
-                    </List>
-                </Grid>
-            </Grid>
+            {/* conditional put alternate if desktop or right if mobile */}       
+            <Timeline position="alternate">
+                <TimelineItem>
+                    <TimelineOppositeContent color="text.secondary">May – July 2023</TimelineOppositeContent>
+                    <TimelineSeparator>
+                        <TimelineDot />
+                        <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                        <Card>
+                            <CardContent>
+                                <Grid item xs={12}>
+                                    <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
+                                        <Typography variant="h6" component="span">Independent Developer, UWI, Department of Computing Information Technology</Typography>
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs={12} md={12} lg={12}>
+                                    <List
+                                        sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper' }}
+                                        component="nav"
+                                        aria-labelledby="nested-list-subheader"
+                                        subheader={
+                                            <ListSubheader component="div" id="nested-list-subheader">
+                                                <ChecklistIcon />List of tasks completed
+                                            </ListSubheader>
+                                        }
+                                    >
+                                        {
+                                            beuwiProjectMay.map((task) => {
+                                                return (
+                                                    <ListItemButton key={task.id}>
+                                                        <ListItemIcon>
+                                                            <DoneIcon />
+                                                        </ListItemIcon>
+                                                        <ListItemText primary={task.details} />
+                                                    </ListItemButton>
+                                                )
+                                            })
+                                        }
+                                    </List>
+                                </Grid>
+                            </CardContent>
+                        </Card>
+                    </TimelineContent>
+                </TimelineItem>
+                {/* Repeat the same structure for other work experiences */}
+                <TimelineItem>
+                    <TimelineOppositeContent color="text.secondary">July - August, 2022</TimelineOppositeContent>
+                    <TimelineSeparator>
+                        <TimelineDot />
+                        <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                        <Card>
+                            <CardContent>
+                                <Grid container spacing={2}>
+                                    <Grid item xs={12}>
+                                        <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
+                                            <Typography variant="h6" component="span">Intern, UWI Department of Computing and Information Technology</Typography>
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item xs={12} md={12} lg={12}>
+                                        <List
+                                            sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper' }}
+                                            component="nav"
+                                            aria-labelledby="nested-list-subheader"
+                                            subheader={
+                                                <ListSubheader component="div" id="nested-list-subheader">
+                                                    <ChecklistIcon />List of tasks completed
+                                                </ListSubheader>
+                                            }
+                                        >
+                                            {
+                                                webThreeProject.map((task) => {
+                                                    return (
+                                                        <ListItemButton key={task.id}>
+                                                            <ListItemIcon>
+                                                                <DoneIcon />
+                                                            </ListItemIcon>
+                                                            <ListItemText primary={task.details} />
+                                                        </ListItemButton>
+                                                    )
+                                                })
+                                            }
+                                        </List>
+                                    </Grid>
+                                </Grid>
+                            </CardContent>
+                        </Card>
+                    </TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                    <TimelineOppositeContent color="text.secondary">January, 2022</TimelineOppositeContent>
+                    <TimelineSeparator>
+                        <TimelineDot />
+                        <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                        <Card>
+                            <CardContent>
+                                <Grid container spacing={2}>
+                                    <Grid item xs={12}>
+                                        <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
+                                            <Typography variant="h6" component="span">Independent Developer, UWI, Department of Computing Information Technology</Typography>
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item xs={12} md={12} lg={12}>
+                                        <List
+                                            sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper' }}
+                                            component="nav"
+                                            aria-labelledby="nested-list-subheader"
+                                            subheader={
+                                                <ListSubheader component="div" id="nested-list-subheader">
+                                                    <ChecklistIcon />List of tasks completed
+                                                </ListSubheader>
+                                            }
+                                        >
+                                            {
+                                                beuwiProjectJan.map((task) => {
+                                                    return (
+                                                        <ListItemButton key={task.id}>
+                                                            <ListItemIcon>
+                                                                <DoneIcon />
+                                                            </ListItemIcon>
+                                                            <ListItemText primary={task.details} />
+                                                        </ListItemButton>
+                                                    )
+                                                })
+                                            }
+                                        </List>
+                                    </Grid>
+                                </Grid>
+                            </CardContent>
+                        </Card>
+                    </TimelineContent>
+                </TimelineItem>
+            </Timeline>
         </Box>
     )
 }
