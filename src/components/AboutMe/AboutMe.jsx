@@ -22,7 +22,11 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const AboutMe = () => {
   return (
-    <Box>
+    <Box
+    sx={{
+      marginBottom: '5rem',
+    }}
+    >
       <Grid container spacing={2}>
         <Grid item xs={12} sx={{
           display: 'flex',

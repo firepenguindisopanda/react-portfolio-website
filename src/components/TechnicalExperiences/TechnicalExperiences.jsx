@@ -154,6 +154,7 @@ const TechnicalExperiences = () => {
             flexGrow: 1,
             p: 2,
             marginTop: '3rem',
+            marginBottom: '10rem',
             bgcolor: 'background.paper',
             borderRadius: '.25rem',
             boxShadow: '0 3px 5px 2px rgba(46, 204, 113, 0.3)',

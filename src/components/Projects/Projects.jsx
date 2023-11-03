@@ -72,7 +72,8 @@ const Projects = () => {
             sx={{
                 flexGrow: 1,
                 overflow: 'hidden',
-                marginTop: 5,
+                marginTop: '3rem',
+                marginBottom: '10rem',
                 pt: 5,
                 pb: 5,
                 height: '100%',

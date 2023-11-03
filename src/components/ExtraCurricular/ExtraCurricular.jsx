@@ -15,9 +15,9 @@ const ExtraCurricular = () => {
 
     return <>
         <Box
-        sx={{
-            marginTop: '3rem',
-        }}>
+            sx={{
+                marginTop: '3rem',
+            }}>
             <Grid
                 item
                 xs={12}
@@ -59,9 +59,9 @@ const ExtraCurricular = () => {
                             </Typography>
                             <ul>
                                 <li>Presented an interactive tutorial on the Exploratory Data Analysis using Titanic dataset and the WiDS Climate Change challenge dataset.</li>
-                                <li>Lead a team of 4 competitors to complete the challenge and achieve 2nd place locally. 
+                                <li>Lead a team of 4 competitors to complete the challenge and achieve 2nd place locally.
                                     <Button variant="contained" color="primary" href="https://www.linkedin.com/posts/nicholas-smith-933125148_certificate-of-participation-in-wids-2023-activity-7040796180926099457-wvrs?utm_source=share&utm_medium=member_desktop" target="_blank">Link To Certificate</Button>
-                                    </li>
+                                </li>
                             </ul>
                         </TimelineContent>
                     </TimelineItem>
