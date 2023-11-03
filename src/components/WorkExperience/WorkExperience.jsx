@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
@@ -91,121 +91,39 @@ const beuwiProjectMay = [
 ];
 
 const WorkExperience = () => {
+    const [currentProject, setCurrentProject] = useState(null);
+
+    const handleProjectChange = (project) => {
+        setCurrentProject(project);
+    };
 
     return (
-
-        <Box sx={{
-            flexGrow: 1,
-            marginTop: 5,
-            pt: 5,
-            pb: 5,
-        }}>
+        <>
             <Box sx={{ marginBottom: '2rem' }}>
                 <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-                    <WorkspacePremiumIcon /><Typography variant="h4" component="span" sx={{ marginRight: '1rem', marginLeft: '1rem' }}>Work Experiences</Typography><WorkspacePremiumIcon />
+                    <WorkspacePremiumIcon color='secondary' /><Typography color='primary' variant="h4" component="span" sx={{ marginRight: '1rem', marginLeft: '1rem' }}>Work Experiences</Typography><WorkspacePremiumIcon color='secondary' />
                 </Typography>
             </Box>
-            {/* conditional put alternate if desktop or right if mobile */}       
-            <Timeline position="alternate">
-                <TimelineItem>
-                    <TimelineOppositeContent color="text.secondary">May – July 2023</TimelineOppositeContent>
-                    <TimelineSeparator>
-                        <TimelineDot />
-                        <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent>
-                        <Card>
-                            <CardContent>
-                                <Grid item xs={12}>
-                                    <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
-                                        <Typography variant="h6" component="span">Independent Developer, UWI, Department of Computing and Information Technology</Typography>
-                                    </Typography>
-                                </Grid>
-                                <Grid item xs={12} md={12} lg={12}>
-                                    <List
-                                        sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper' }}
-                                        component="nav"
-                                        aria-labelledby="nested-list-subheader"
-                                        subheader={
-                                            <ListSubheader component="div" id="nested-list-subheader">
-                                                <ChecklistIcon />List of tasks completed
-                                            </ListSubheader>
-                                        }
-                                    >
-                                        {
-                                            beuwiProjectMay.map((task) => {
-                                                return (
-                                                    <ListItemButton key={task.id}>
-                                                        <ListItemIcon>
-                                                            <DoneIcon />
-                                                        </ListItemIcon>
-                                                        <ListItemText primary={task.details} />
-                                                    </ListItemButton>
-                                                )
-                                            })
-                                        }
-                                    </List>
-                                </Grid>
-                            </CardContent>
-                        </Card>
-                    </TimelineContent>
-                </TimelineItem>
-                {/* Repeat the same structure for other work experiences */}
-                <TimelineItem>
-                    <TimelineOppositeContent color="text.secondary">July - August, 2022</TimelineOppositeContent>
-                    <TimelineSeparator>
-                        <TimelineDot />
-                        <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent>
-                        <Card>
-                            <CardContent>
-                                <Grid container spacing={2}>
-                                    <Grid item xs={12}>
-                                        <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
-                                            <Typography variant="h6" component="span">Intern, UWI Department of Computing and Information Technology</Typography>
-                                        </Typography>
-                                    </Grid>
-                                    <Grid item xs={12} md={12} lg={12}>
-                                        <List
-                                            sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper' }}
-                                            component="nav"
-                                            aria-labelledby="nested-list-subheader"
-                                            subheader={
-                                                <ListSubheader component="div" id="nested-list-subheader">
-                                                    <ChecklistIcon />List of tasks completed
-                                                </ListSubheader>
-                                            }
-                                        >
-                                            {
-                                                webThreeProject.map((task) => {
-                                                    return (
-                                                        <ListItemButton key={task.id}>
-                                                            <ListItemIcon>
-                                                                <DoneIcon />
-                                                            </ListItemIcon>
-                                                            <ListItemText primary={task.details} />
-                                                        </ListItemButton>
-                                                    )
-                                                })
-                                            }
-                                        </List>
-                                    </Grid>
-                                </Grid>
-                            </CardContent>
-                        </Card>
-                    </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineOppositeContent color="text.secondary">January, 2022</TimelineOppositeContent>
-                    <TimelineSeparator>
-                        <TimelineDot />
-                        <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent>
-                        <Card>
-                            <CardContent>
-                                <Grid container spacing={2}>
+            <Box sx={{
+                flexGrow: 1,
+                marginTop: '3rem',
+                marginBottom: '10rem',
+                pt: 5,
+                pb: 5,
+                overflow: 'auto',
+                maxHeight: '100vh'
+            }}>
+
+                <Timeline position="alternate">
+                    <TimelineItem>
+                        <TimelineOppositeContent color="text.secondary">May – July 2023</TimelineOppositeContent>
+                        <TimelineSeparator>
+                            <TimelineDot />
+                            <TimelineConnector />
+                        </TimelineSeparator>
+                        <TimelineContent>
+                            <Card>
+                                <CardContent>
                                     <Grid item xs={12}>
                                         <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
                                             <Typography variant="h6" component="span">Independent Developer, UWI, Department of Computing and Information Technology</Typography>
@@ -213,7 +131,7 @@ const WorkExperience = () => {
                                     </Grid>
                                     <Grid item xs={12} md={12} lg={12}>
                                         <List
-                                            sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper' }}
+                                            sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper', maxHeight: '300px', overflowY: 'auto' }}
                                             component="nav"
                                             aria-labelledby="nested-list-subheader"
                                             subheader={
@@ -223,26 +141,121 @@ const WorkExperience = () => {
                                             }
                                         >
                                             {
-                                                beuwiProjectJan.map((task) => {
-                                                    return (
-                                                        <ListItemButton key={task.id}>
+                                                beuwiProjectMay.map((task) => (
+                                                    <ListItemButton key={task.id} onClick={() => handleProjectChange(task)}>
+                                                        <ListItemIcon>
+                                                            <DoneIcon />
+                                                        </ListItemIcon>
+                                                        <ListItemText primary={task.details} />
+                                                    </ListItemButton>
+                                                ))
+                                            }
+                                        </List>
+                                    </Grid>
+                                </CardContent>
+                            </Card>
+                        </TimelineContent>
+                    </TimelineItem>
+                    {/* Repeat the same structure for other work experiences */}
+                    <TimelineItem>
+                        <TimelineOppositeContent color="text.secondary">July - August, 2022</TimelineOppositeContent>
+                        <TimelineSeparator>
+                            <TimelineDot />
+                            <TimelineConnector />
+                        </TimelineSeparator>
+                        <TimelineContent>
+                            <Card>
+                                <CardContent>
+                                    <Grid container spacing={2}>
+                                        <Grid item xs={12}>
+                                            <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
+                                                <Typography variant="h6" component="span">Intern, UWI Department of Computing and Information Technology</Typography>
+                                            </Typography>
+                                        </Grid>
+                                        <Grid item xs={12} md={12} lg={12}>
+                                            <List
+                                                sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper', maxHeight: '300px', overflowY: 'auto' }}
+                                                component="nav"
+                                                aria-labelledby="nested-list-subheader"
+                                                subheader={
+                                                    <ListSubheader component="div" id="nested-list-subheader">
+                                                        <ChecklistIcon />List of tasks completed
+                                                    </ListSubheader>
+                                                }
+                                            >
+                                                {
+                                                    webThreeProject.map((task) => (
+                                                        <ListItemButton key={task.id} onClick={() => handleProjectChange(task)}>
                                                             <ListItemIcon>
                                                                 <DoneIcon />
                                                             </ListItemIcon>
                                                             <ListItemText primary={task.details} />
                                                         </ListItemButton>
-                                                    )
-                                                })
-                                            }
-                                        </List>
+                                                    ))
+                                                }
+                                            </List>
+                                        </Grid>
                                     </Grid>
-                                </Grid>
+                                </CardContent>
+                            </Card>
+                        </TimelineContent>
+                    </TimelineItem>
+                    <TimelineItem>
+                        <TimelineOppositeContent color="text.secondary">January, 2022</TimelineOppositeContent>
+                        <TimelineSeparator>
+                            <TimelineDot />
+                            <TimelineConnector />
+                        </TimelineSeparator>
+                        <TimelineContent>
+                            <Card>
+                                <CardContent>
+                                    <Grid container spacing={2}>
+                                        <Grid item xs={12}>
+                                            <Typography variant="h6" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
+                                                <Typography variant="h6" component="span">Independent Developer, UWI, Department of Computing and Information Technology</Typography>
+                                            </Typography>
+                                        </Grid>
+                                        <Grid item xs={12} md={12} lg={12}>
+                                            <List
+                                                sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper', maxHeight: '300px', overflowY: 'auto' }}
+                                                component="nav"
+                                                aria-labelledby="nested-list-subheader"
+                                                subheader={
+                                                    <ListSubheader component="div" id="nested-list-subheader">
+                                                        <ChecklistIcon />List of tasks completed
+                                                    </ListSubheader>
+                                                }
+                                            >
+                                                {beuwiProjectJan.map((task) => (
+                                                    <ListItemButton key={task.id} onClick={() => handleProjectChange(task)}>
+                                                        <ListItemIcon>
+                                                            <DoneIcon />
+                                                        </ListItemIcon>
+                                                        <ListItemText primary={task.details} />
+                                                    </ListItemButton>
+                                                ))}
+                                            </List>
+                                        </Grid>
+                                    </Grid>
+                                </CardContent>
+                            </Card>
+                        </TimelineContent>
+                    </TimelineItem>
+                    {currentProject && (
+                        <Card>
+                            <CardContent>
+                                <Typography variant="h6" component="div">
+                                    Details of the selected project:
+                                </Typography>
+                                <Typography variant="body1" component="div">
+                                    {currentProject.details}
+                                </Typography>
                             </CardContent>
                         </Card>
-                    </TimelineContent>
-                </TimelineItem>
-            </Timeline>
-        </Box>
+                    )}
+                </Timeline>
+            </Box>
+        </>
     )
 }
 

@@ -181,7 +181,7 @@ const TechnicalSkills = () => {
                     marginBottom: '1rem',
                     borderBottom: '1px solid #ccc',
                 }}>
-                    <ConstructionIcon sx={{marginBottom: '1rem'}} /><Typography variant="h4" component="h1" sx={{marginBottom: '1rem', marginRight: '1rem', marginLeft: '1rem'}}>Technologies / Tools I Have Used</Typography><ConstructionIcon sx={{marginBottom: '1rem'}} />
+                    <ConstructionIcon color='secondary' sx={{marginBottom: '1rem'}} /><Typography variant="h4" color='primary' component="h1" sx={{marginBottom: '1rem', marginRight: '1rem', marginLeft: '1rem', fontFamily: 'Croissant One, cursive'}}>Technologies / Tools I Have Used</Typography><ConstructionIcon color='secondary' sx={{marginBottom: '1rem'}} />
                 </Grid>
                 <Grid
                     item

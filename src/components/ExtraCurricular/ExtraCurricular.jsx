@@ -17,6 +17,7 @@ const ExtraCurricular = () => {
         <Box
             sx={{
                 marginTop: '3rem',
+                marginBottom: '10rem',
             }}>
             <Grid
                 item
@@ -29,7 +30,7 @@ const ExtraCurricular = () => {
                     marginBottom: '3rem',
                 }}
             >
-                <Typography variant="h4" component="h1" sx={{ marginBottom: '1rem', fontFamily: 'Croissant One, cursive' }}>
+                <Typography variant="h4" component="h1" color='primary' sx={{ marginBottom: '1rem', fontFamily: 'Croissant One, cursive' }}>
                     Extra Curricular Activities
                 </Typography>
             </Grid>

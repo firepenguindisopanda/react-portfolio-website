@@ -83,7 +83,7 @@ const Projects = () => {
         >
             <Box sx={{ marginBottom: '2rem' }}>
                 <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-                    <Typography variant="h4" component="span" sx={{ marginRight: '1rem', marginLeft: '1rem' }}>🚀 Technical Projects 🚀</Typography>
+                    <Typography variant="h4" color='primary' component="span" sx={{ marginRight: '1rem', marginLeft: '1rem', fontFamily: 'Croissant One, cursive' }}>🚀 Technical Projects 🚀</Typography>
                 </Typography>
             </Box>
             <Grid container spacing={2}>

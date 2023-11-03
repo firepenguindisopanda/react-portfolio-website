@@ -23,9 +23,9 @@ const Item = styled(Paper)(({ theme }) => ({
 const AboutMe = () => {
   return (
     <Box
-    sx={{
-      marginBottom: '5rem',
-    }}
+      sx={{
+        marginBottom: '5rem',
+      }}
     >
       <Grid container spacing={2}>
         <Grid item xs={12} sx={{
@@ -40,7 +40,10 @@ const AboutMe = () => {
         {/* About Me */}
         <Grid item xs={12} md={8}>
           <Item>
-            <Typography variant="h2" gutterBottom>
+            <Typography variant="h2" color='primary' gutterBottom sx={{
+              marginBottom: '1rem',
+              fontFamily: 'Croissant One, cursive'
+            }}>
               About Me
             </Typography>
             <Typography variant="body1" paragraph>

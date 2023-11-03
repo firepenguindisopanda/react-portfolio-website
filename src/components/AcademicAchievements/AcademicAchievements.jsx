@@ -121,24 +121,30 @@ const AcademicAchievements = () => {
     };
     return (
         <>
-            <Box>
-                {/* Academic Achievements header */}
-                <Grid item xs={12} sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    flexDirection: 'row',
-                    marginBottom: '3rem',
+            {/* Academic Achievements header */}
+            <Grid item xs={12} sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection: 'row',
+                marginBottom: '3rem',
+            }} >
+                <SchoolIcon color='secondary' sx={{ marginBottom: '1rem', marginRight: '1rem' }} />
+                <Typography variant="h4" color='primary' component="h1" sx={{
+                    marginBottom: '1rem',
+                    fontFamily: 'Croissant One, cursive'
                 }}>
-                    <SchoolIcon sx={{ marginBottom: '1rem', marginRight: '1rem' }} />
-                    <Typography variant="h4" component="h1" sx={{ 
-                        marginBottom: '1rem',
-                        fontFamily: 'Croissant One, cursive'
-                        }}>
-                        Academic Achievements
-                    </Typography>
-                    <SchoolIcon sx={{ marginBottom: '1rem', marginLeft: '1rem' }} />
-                </Grid>
+                    Academic Achievements
+                </Typography>
+                <SchoolIcon color='secondary' sx={{ marginBottom: '1rem', marginLeft: '1rem' }} />
+            </Grid>
+            <Box
+                sx={{
+                    marginTop: '3rem',
+                    marginBottom: '10rem',
+                }}
+            >
+
 
                 {/* Left and Right sections */}
                 <Grid container>
@@ -214,7 +220,7 @@ const AcademicAchievements = () => {
                             />
                         </Box>
                     </Grid>
-                    <Grid item xs={12} md={6} sx={{paddingTop: '2rem'}}>
+                    <Grid item xs={12} md={6} sx={{ paddingTop: '2rem' }}>
                         {/* Right section */}
                         <Grid container spacing={3}>
                             <Grid item xs={12} md={6} lg={6}>

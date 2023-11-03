@@ -3,6 +3,7 @@ import './contact.css'
 import { MdOutlineEmail } from 'react-icons/md'
 import { Card, CardContent, CardActions, Box, Button, Container, Grid, TextField, Typography } from '@mui/material';
 import { BsWhatsapp } from 'react-icons/bs'
+import { purple, red } from '@mui/material/colors';
 import emailjs from 'emailjs-com'
 
 const Contact = () => {
@@ -30,7 +31,9 @@ const Contact = () => {
         marginTop: '3rem',
       }}>
         <Typography variant='h5'>Want to collab on a project or get in touch?</Typography>
-        <Typography variant='h2'>Contact Me</Typography>
+        <Typography variant='h2' color='primary' sx={{
+          fontFamily: 'Croissant One, cursive'
+        }}>Contact Me</Typography>
       </Grid>
 
       <Container maxWidth='lg' sx={{
@@ -49,12 +52,15 @@ const Contact = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small"><a href='mailto:nicholas122008@hotmail.com' target='_blank' rel='noreferrer' sx={{
-                  textDecoration: 'none',
-                  color: 'inherit'
-                }}>
-                  Send a message
-                </a></Button>
+                <Button size="medium"
+                  color='secondary'
+                  sx={{
+                    textDecoration: 'none',
+                  }}
+                ><a href='mailto:nicholas122008@hotmail.com' target='_blank' rel='noreferrer'>
+                    Send a message
+                  </a>
+                </Button>
               </CardActions>
             </Card>
 
@@ -71,7 +77,7 @@ const Contact = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small"><a href='https://api.whatsapp.com/send?phone=+18686864906' target='_blank' rel='noreferrer'>
+                <Button size="medium" color='secondary'><a href='https://api.whatsapp.com/send?phone=+18686864906' target='_blank' rel='noreferrer'>
                   Send a message
                 </a></Button>
               </CardActions>
@@ -85,7 +91,7 @@ const Contact = () => {
         <TextField fullWidth label='Your Full Name' name='name' required />
         <TextField fullWidth label='Your Email' name='email' required />
         <TextField fullWidth label='Your Message' name='message' multiline rows={7} required />
-        <Button type='submit' variant='contained' color='primary'>
+        <Button type='submit' variant='contained' color='primary' size='large'>
           Send Message
         </Button>
       </form>

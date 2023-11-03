@@ -164,7 +164,7 @@ const TechnicalExperiences = () => {
         }}>
             <Box>
                 <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-                    <WorkOutlineIcon /><Typography variant="h4" component="span" sx={{ marginRight: '1rem', marginLeft: '1rem' }}>Technical Experience</Typography><WorkOutlineIcon />
+                    <WorkOutlineIcon color='secondary' /><Typography variant="h4" color='primary' component="span" sx={{ marginRight: '1rem', marginLeft: '1rem', fontFamily: 'Croissant One, cursive' }}>Technical Experience</Typography><WorkOutlineIcon color='secondary' />
                 </Typography>
                 <Typography variant="body1" component="div" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row', marginBottom: '1rem' }}>
                     <div style={{ width: '55px', height: '55px' }}>
