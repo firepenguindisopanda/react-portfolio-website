@@ -101,7 +101,7 @@ const WorkExperience = () => {
         <>
             <Box sx={{ marginBottom: '2rem' }}>
                 <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-                    <WorkspacePremiumIcon color='secondary' /><Typography color='primary' variant="h4" component="span" sx={{ marginRight: '1rem', marginLeft: '1rem' }}>Work Experiences</Typography><WorkspacePremiumIcon color='secondary' />
+                    <WorkspacePremiumIcon color='secondary' /><Typography color='primary' variant="h4" component="span" sx={{ marginRight: '1rem', marginLeft: '1rem', fontFamily: 'Croissant One, cursive' }}>Work Experiences</Typography><WorkspacePremiumIcon color='secondary' />
                 </Typography>
             </Box>
             <Box sx={{

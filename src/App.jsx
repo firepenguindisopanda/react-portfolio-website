@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -7,8 +7,9 @@ import '@fontsource/roboto/700.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { ThemeProvider, createTheme, useTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { Container } from '@mui/material';
+import { Container, List, ListItem, ListItemText, Box } from '@mui/material';
 import { getDesignTokens } from './utilities';
+import { Splitscreen } from '@mui/icons-material';
 import DrawerAppBar from './components/DrawerAppBar/DrawerAppBar';
 import AboutMe from './components/AboutMe/AboutMe';
 import TechnicalSkills from './components/TechnicalSkills/TechnicalSkills';
@@ -16,15 +17,64 @@ import TechnicalExperiences from './components/TechnicalExperiences/TechnicalExp
 import Projects from './components/Projects/Projects';
 import WorkExperience from './components/WorkExperience/WorkExperience';
 import AcademicAchievements from './components/AcademicAchievements/AcademicAchievements';
-import ExtraCurricular from './components/ExtraCurricular/ExtraCurricular';
 import Contact from './components/contact/Contact';
+import SplitScreen from './components/SplitScreen/SplitScreen';
+import ExtraCurricular from './components/TechnicalSkills/ExtraCurricular';
 
 
+const LeftHandComponent = ({ onSelectLink, selectedLink }) => {
+  const links = ['About Me', 'Technical Skills', 'Technical Experiences', 'Projects', 'Work Experience'];
 
+  return (
+    <div>
+      <Splitscreen />
+      <List>
+        {links.map((link, index) => (
+          <ListItem
+            key={index}
+            button
+            onClick={() => onSelectLink(link)}
+            selected={selectedLink === link}
+          >
+            <ListItemText primary={link} />
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
+}
 
-const ColorModeContext = React.createContext({ toggleColorMode: () => {}});
+const RightHandComponent = ({ selectedLink }) => {
+  switch (selectedLink) {
+    case 'About Me':
+      return <h1>About Me</h1>;
+    case 'Technical Skills':
+      return <h1>Technical Skills</h1>;
+    case 'Technical Experiences':
+      return <h1>Technical Experiences</h1>;
+    case 'Projects':
+      return <h1>Projects</h1>;
+    case 'Work Experience':
+      return <h1>Work Experience</h1>;
+    default:
+      return <Box sx={{
+        flexGrow: 1,
+        p: 2,
+        marginTop: '3rem',
+        marginBottom: '10rem',
+        bgcolor: 'background.paper',
+        borderRadius: '.25rem',
+        boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+      }}>
+        <h1>Default</h1>
+      </Box>;
+  }
+}
+
+const ColorModeContext = React.createContext({ toggleColorMode: () => { } });
 const ToggleColorMode = () => {
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const [selectedLink, setSelectedLink] = useState('About Me');
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: light)');
   const [mode, setMode] = React.useState(prefersDarkMode ? 'dark' : 'light');
   const colorMode = React.useMemo(
     () => ({
@@ -36,26 +86,38 @@ const ToggleColorMode = () => {
   );
 
   const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
-  
+
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        
-        <Container maxWidth="lg" sx={{p: 2}}>
+
+        <Container maxWidth="xl" sx={{ p: 2 }}>
           <App />
+          {/* <SplitScreen
+            leftWeight={1}
+            rightWeight={4}
+          >
+            <LeftHandComponent onSelectLink={setSelectedLink} selectedLink={selectedLink} />
+            <RightHandComponent selectedLink={selectedLink} />
+          </SplitScreen> */}
           <AboutMe />
-          <TechnicalSkills />
+          <SplitScreen
+            leftWeight={2}
+            rightWeight={1}>
+            <TechnicalSkills />
+            <ExtraCurricular />
+          </SplitScreen>
+
           <TechnicalExperiences />
           <Projects />
           <WorkExperience />
         </Container>
-        <Container fluid maxWidth="xl" sx={{p: 2}}>
+        <Container fluid='true' maxWidth="xl" sx={{ p: 2 }}>
           <AcademicAchievements />
-          <ExtraCurricular />
           <Contact />
         </Container>
-        
+
       </ThemeProvider>
     </ColorModeContext.Provider>
   )

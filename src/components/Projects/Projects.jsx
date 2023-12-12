@@ -2,6 +2,8 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import ReactPlayer from 'react-player'
+import { styled } from '@mui/material/styles';
 import Link from '@mui/material/Link';
 import JINJA from '../../assets/jinja-logo.png';
 import ListSubheader from '@mui/material/ListSubheader';
@@ -20,6 +22,10 @@ import {
     ReactIcon,
     FirebaseIcon,
 } from '../SvgIcons';
+import CHATBOTVIDMP4 from '../../assets/uwi-chatbot-testing.mp4';
+import Paper from '@mui/material/Paper';
+import CHATBOTVIDWEBM from '../../assets/uwi-chatbot-testing.webm';
+import { Chip } from '@mui/material';
 
 const recipeAppTasks = [
     {
@@ -66,6 +72,14 @@ const portfolioAppTasks = [
     }
 ]
 
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+}));
+
 const Projects = () => {
     return (
         <Box
@@ -86,6 +100,49 @@ const Projects = () => {
                     <Typography variant="h4" color='primary' component="span" sx={{ marginRight: '1rem', marginLeft: '1rem', fontFamily: 'Croissant One, cursive' }}>🚀 Technical Projects 🚀</Typography>
                 </Typography>
             </Box>
+            <Grid container spacing={2} sx={{ marginBottom: '1rem' }}>
+                <Grid item xs={12} md={8}>
+                    <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
+                        <Typography variant="h4" component="span">UWI DCIT Chatbot</Typography>
+                    </Typography>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                    <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row' }}>
+                        <Link href="https://github.com/firepenguindisopanda/experiment-uwi-dcit-chatbot" underline="hover" >
+                            <Typography variant="h4" component="span">Chatbot Repository</Typography>
+                        </Link>
+                    </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                    <Typography sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
+                        Technologies Used:
+                        <Chip label="FAISS (vector Database)" size="small" color="primary" />
+                        <Chip label="Python" size="small" color="primary" />
+                        <Chip label="Langchain" size="small" color="primary" />
+                        <Chip label="Google PALM" size="small" color="primary" />
+                        <Chip label="HuggingEmbeddings" size="small" color="primary" />
+                    </Typography>
+                </Grid>
+                <Grid item xs={6}
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center',  // Center horizontally
+                        alignItems: 'center',
+                        flexDirection: 'row',
+                        flexWrap: 'wrap', // Allow icons to wrap when the screen size is small
+                    }}
+                >
+                    <Grid item xs={12}>
+                        <Item>
+                            <video controls width="100%" height="340px" autoPlay="true">
+                                <source src={CHATBOTVIDWEBM} type="video/webm" />
+                                Sorry, your browser doesn't support videos.
+                            </video>
+                        </Item>
+                    </Grid>
+                </Grid>
+
+            </Grid>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={8}>
                     <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
