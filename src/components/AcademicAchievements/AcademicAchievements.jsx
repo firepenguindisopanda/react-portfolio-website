@@ -281,7 +281,7 @@ const AcademicAchievements = () => {
                                         </Typography>
                                     </CardContent>
                                     <CardActions>
-                                        <Button size="small">Learn More</Button>
+                                        <Button size="small" href="https://www.linkedin.com/posts/nicholas-smith-933125148_certificate-of-participation-in-wids-2023-activity-7040796180926099457-wvrs?utm_source=share&utm_medium=member_desktop" target="_blank">Learn More</Button>
                                     </CardActions>
                                 </Card>
                             </Grid>

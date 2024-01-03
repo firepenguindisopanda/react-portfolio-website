@@ -13,10 +13,12 @@ import {
 import "./TE.css"
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import { useMediaQuery } from '@mui/material';
 
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
+
 
     return (
         <div
@@ -125,7 +127,7 @@ const TechnicalExperience = [
     },
     {
         value: 4,
-        title: 'Data Science & Machine Learning Skill (Work In Progress)',
+        title: 'Data Science & Machine Learning Skill',
         membersOf: [
             'Python',
             'Numpy',
@@ -139,12 +141,15 @@ const TechnicalExperience = [
             'Jupyter Notebook',
             'Google Colab',
             'Power BI',
+            'Natural Language Processing',
+            'Microsoft Excel / Google Sheets (Data Analysis)',
         ]
     }
 ]
 
 const TechnicalExperiences = () => {
     const [value, setValue] = React.useState(0);
+    const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -179,7 +184,9 @@ const TechnicalExperiences = () => {
                 </Typography>
             </Box>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                <Tabs value={value} onChange={handleChange} variant="scrollable"
+                    scrollButtons="auto"
+                    aria-label="scrollable auto tabs example">
                     {
                         TechnicalExperience.map((item) => {
                             return (

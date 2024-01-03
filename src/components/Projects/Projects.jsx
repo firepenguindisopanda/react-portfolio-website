@@ -22,7 +22,7 @@ import {
     ReactIcon,
     FirebaseIcon,
 } from '../SvgIcons';
-import CHATBOTVIDMP4 from '../../assets/uwi-chatbot-testing.mp4';
+
 import Paper from '@mui/material/Paper';
 import CHATBOTVIDWEBM from '../../assets/uwi-chatbot-testing.webm';
 import { Chip } from '@mui/material';
@@ -81,6 +81,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const Projects = () => {
+
     return (
         <Box
             sx={{
@@ -102,7 +103,7 @@ const Projects = () => {
             </Box>
             <Grid container spacing={2} sx={{ marginBottom: '1rem' }}>
                 <Grid item xs={12} md={8}>
-                    <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
+                    <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3, fontStyle: 'bolder' }}>
                         <Typography variant="h4" component="span">UWI DCIT Chatbot</Typography>
                     </Typography>
                 </Grid>
@@ -113,17 +114,19 @@ const Projects = () => {
                         </Link>
                     </Typography>
                 </Grid>
-                <Grid item xs={6}>
-                    <Typography sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
-                        Technologies Used:
-                        <Chip label="FAISS (vector Database)" size="small" color="primary" />
-                        <Chip label="Python" size="small" color="primary" />
-                        <Chip label="Langchain" size="small" color="primary" />
-                        <Chip label="Google PALM" size="small" color="primary" />
-                        <Chip label="HuggingEmbeddings" size="small" color="primary" />
+                <Grid item xs={12} md={6}>
+                    <Typography variant="body1" sx={{ display: 'flex', flexDirection: 'column', gap: 2, marginLeft: 3 }}>
+                        <span style={{ fontWeight: 'bold', marginRight: 5 }}>Technologies used:</span>
+                        <Box sx={{ display: { xs: 'block', md: 'flex' }, flexWrap: 'wrap', gap: 2 }}>
+                            <Chip label="FAISS (vector Database)" size="small" color="primary" />
+                            <Chip label="Python" size="small" color="primary" />
+                            <Chip label="Langchain" size="small" color="primary" />
+                            <Chip label="Google PALM" size="small" color="primary" />
+                            <Chip label="HuggingEmbeddings" size="small" color="primary" />
+                        </Box>
                     </Typography>
                 </Grid>
-                <Grid item xs={6}
+                <Grid item xs={12} md={6}
                     sx={{
                         display: 'flex',
                         justifyContent: 'center',  // Center horizontally
@@ -136,6 +139,7 @@ const Projects = () => {
                         <Item>
                             <video controls width="100%" height="340px" autoPlay="true">
                                 <source src={CHATBOTVIDWEBM} type="video/webm" />
+                                <track kind="captions" src="captions.vtt" label="English" />
                                 Sorry, your browser doesn't support videos.
                             </video>
                         </Item>
@@ -143,9 +147,9 @@ const Projects = () => {
                 </Grid>
 
             </Grid>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} sx={{ marginTop: '2rem' }}>
                 <Grid item xs={12} md={8}>
-                    <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
+                    <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3, fontStyle: 'bolder' }}>
                         <Typography variant="h4" component="span">Recipe App</Typography>
                     </Typography>
                 </Grid>
@@ -156,12 +160,18 @@ const Projects = () => {
                         </Link>
                     </Typography>
                 </Grid>
-                <Grid item xs={6}>
+
+                <Grid item xs={12} md={6}>
                     <Typography sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
-                        Technologies Used: Jinja, Flask, Heroku
+                        <span style={{ fontWeight: 'bold', marginRight: 5 }}>Technologies used:</span>
+                        <Box sx={{ display: { xs: 'block', md: 'flex' }, flexWrap: 'wrap', gap: 2 }}>
+                            <Chip label="Jinja" size="small" color="primary" />
+                            <Chip label="Flask" size="small" color="primary" />
+                            <Chip label="Heroku" size="small" color="primary" />
+                        </Box>
                     </Typography>
                 </Grid>
-                <Grid item xs={6}
+                <Grid item xs={12} md={6}
                     sx={{
                         display: 'flex',
                         justifyContent: 'center',  // Center horizontally
@@ -218,7 +228,7 @@ const Projects = () => {
                     </List>
                 </Grid>
             </Grid>
-            <Grid container spacing={2} sx={{ marginTop: 2 }}>
+            <Grid container spacing={2} sx={{ marginTop: '2rem' }}>
                 <Grid item xs={12} md={8}>
                     <Typography variant="h4" component="div" sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
                         <Link href="https://focused-neumann-3db077.netlify.app/" underline="hover">
@@ -233,12 +243,19 @@ const Projects = () => {
                         </Link>
                     </Typography>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <Typography sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
-                        Technologies used: AngularJS, MaterialUI, Github Actions, Netlify
+                        <span style={{ fontWeight: 'bold', marginRight: 5 }}>Technologies used:</span>
+
+                        <Box sx={{ display: { xs: 'block', md: 'flex' }, flexWrap: 'wrap', gap: 2 }}>
+                            <Chip label="AngularJS" size="small" color="primary" />
+                            <Chip label="MaterialUI" size="small" color="primary" />
+                            <Chip label="Github Actions" size="small" color="primary" />
+                            <Chip label="Netlify" size="small" color="primary" />
+                        </Box>
                     </Typography>
                 </Grid>
-                <Grid item xs={6}
+                <Grid item xs={12} md={6}
                     sx={{
                         display: 'flex',
                         justifyContent: 'center',  // Center horizontally
@@ -307,12 +324,18 @@ const Projects = () => {
                         </Link>
                     </Typography>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <Typography sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', flexDirection: 'row', marginLeft: 3 }}>
-                        Technologies used: React (frontend), Material UI, Firebase (hosting)
+                        <span style={{ fontWeight: 'bold', marginRight: 5 }}>Technologies used:</span>
+
+                        <Box sx={{ display: { xs: 'block', md: 'flex' }, flexWrap: 'wrap', gap: 2 }}>
+                            <Chip label="React (frontend)" size="small" color="primary" />
+                            <Chip label="Material UI" size="small" color="primary" />
+                            <Chip label="Firebase (hosting)" size="small" color="primary" />
+                        </Box>
                     </Typography>
                 </Grid>
-                <Grid item xs={6}
+                <Grid item xs={12} md={6}
                     sx={{
                         display: 'flex',
                         justifyContent: 'center',  // Center horizontally

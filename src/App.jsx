@@ -7,9 +7,10 @@ import '@fontsource/roboto/700.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { ThemeProvider, createTheme, useTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { Container, List, ListItem, ListItemText, Box } from '@mui/material';
+import { Container, List, ListItem, ListItemText, Box, Button } from '@mui/material';
 import { getDesignTokens } from './utilities';
 import { Splitscreen } from '@mui/icons-material';
+import RESUME from './assets/NicholasSmith_Resume.pdf';
 import DrawerAppBar from './components/DrawerAppBar/DrawerAppBar';
 import AboutMe from './components/AboutMe/AboutMe';
 import TechnicalSkills from './components/TechnicalSkills/TechnicalSkills';
@@ -101,6 +102,12 @@ const ToggleColorMode = () => {
             <LeftHandComponent onSelectLink={setSelectedLink} selectedLink={selectedLink} />
             <RightHandComponent selectedLink={selectedLink} />
           </SplitScreen> */}
+          <Box sx={{ display: { xs: 'flex', sm: 'none' }, justifyContent: 'center', alignItems: 'center' }}>
+            {/* Button with text view Resume when clicked will open up in a new tab the pdf RESUME */}
+            <Button href={RESUME} target="_blank" variant="outlined" color="secondary" sx={{ mr: 2 }}>
+              View Resume
+            </Button>
+          </Box>
           <AboutMe />
           <SplitScreen
             leftWeight={2}

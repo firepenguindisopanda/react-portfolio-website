@@ -19,6 +19,9 @@ import DoneIcon from '@mui/icons-material/Done';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
+
 
 
 const webThreeProject = [
@@ -96,6 +99,8 @@ const WorkExperience = () => {
     const handleProjectChange = (project) => {
         setCurrentProject(project);
     };
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up('md'));
 
     return (
         <>
@@ -114,7 +119,7 @@ const WorkExperience = () => {
                 maxHeight: '100vh'
             }}>
 
-                <Timeline position="alternate">
+                <Timeline position={matches ? "alternate" : "left"}>
                     <TimelineItem>
                         <TimelineOppositeContent color="text.secondary">May – July 2023</TimelineOppositeContent>
                         <TimelineSeparator>
